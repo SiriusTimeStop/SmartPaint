@@ -43,6 +43,7 @@
 		387973E12B498AF8009A01F3 /* CreateNewPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973E02B498AF8009A01F3 /* CreateNewPost.swift */; };
 		387973E32B498C3B009A01F3 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973E22B498C3B009A01F3 /* PostView.swift */; };
 		387973E52B498C40009A01F3 /* ReusablePostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973E42B498C40009A01F3 /* ReusablePostsView.swift */; };
+		387973E72B498DED009A01F3 /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973E62B498DED009A01F3 /* PostCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		387973E02B498AF8009A01F3 /* CreateNewPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewPost.swift; sourceTree = "<group>"; };
 		387973E22B498C3B009A01F3 /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		387973E42B498C40009A01F3 /* ReusablePostsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusablePostsView.swift; sourceTree = "<group>"; };
+		387973E62B498DED009A01F3 /* PostCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 				387973C22B49813E009A01F3 /* ReusableProfileContent.swift */,
 				387973E22B498C3B009A01F3 /* PostView.swift */,
 				387973E02B498AF8009A01F3 /* CreateNewPost.swift */,
+				387973E62B498DED009A01F3 /* PostCardView.swift */,
 				387973E42B498C40009A01F3 /* ReusablePostsView.swift */,
 			);
 			path = MainView;
@@ -441,6 +444,7 @@
 				387973D32B498347009A01F3 /* GeneratorViewModel.swift in Sources */,
 				387973E32B498C3B009A01F3 /* PostView.swift in Sources */,
 				387973872B46D966009A01F3 /* RegisterView.swift in Sources */,
+				387973E72B498DED009A01F3 /* PostCardView.swift in Sources */,
 				387973832B46C430009A01F3 /* LoadingView.swift in Sources */,
 				387973C62B49833E009A01F3 /* DrawingView.swift in Sources */,
 				387973D02B498347009A01F3 /* ImageStyle.swift in Sources */,

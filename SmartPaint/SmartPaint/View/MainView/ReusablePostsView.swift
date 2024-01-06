@@ -11,7 +11,7 @@ import Firebase
 struct ReusablePostsView: View {
     @Binding var posts: [Post]
     
-    @State var isFetching: Bool = false
+    @State var isFetching: Bool = true
     
     var body: some View {
         ScrollView(.vertical,showsIndicators: false){
@@ -30,6 +30,16 @@ struct ReusablePostsView: View {
                     }
                 }
             }
+            .padding(15)
+        }
+        .refreshable {
+            isFetching = true
+            posts = []
+            await fetchPosts()
+        }
+        .task {
+            guard posts.isEmpty else{return}
+            await fetchPosts()
         }
     }
     
@@ -37,7 +47,21 @@ struct ReusablePostsView: View {
     func Posts()->some View{
         ForEach(posts){
             post in
-            Text(post.text)
+            PostCardView(post: post) { updatedPost in
+                if let index = posts.firstIndex(where: { post in
+                    post.id == updatedPost.id
+                }){
+                    posts[index].likedIDs = updatedPost.likedIDs
+                    posts[index].dislikedIDs = updatedPost.dislikedIDs
+                }
+            } onDelete: {
+                withAnimation(.easeInOut(duration: 0.25)){
+                    posts.removeAll{post.id == $0.id}
+                }
+            }
+            
+            Divider()
+                .padding(.horizontal,-15)
         }
     }
     
@@ -48,6 +72,14 @@ struct ReusablePostsView: View {
                 .order(by: "publishedDate",descending: true)
                 .limit(to: 20)
             let docs = try await query.getDocuments()
+            let fetchPosts = docs.documents.compactMap { doc -> Post? in
+                try? doc.data(as: Post.self)
+                
+            }
+            await MainActor.run(body: {
+                posts = fetchPosts
+                isFetching = false
+            })
         }catch{
             print(error.localizedDescription)
         }

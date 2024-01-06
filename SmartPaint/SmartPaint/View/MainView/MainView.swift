@@ -29,7 +29,7 @@ struct MainView: View {
                     Text("AI Image")
                 }
             
-            Text("Recent Post's")
+            PostView()
                 .tabItem {
                     Image(systemName: "rectangle.portrait.on.rectangle.portrait.angled")
                     Text("Post's")
