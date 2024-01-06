@@ -1,0 +1,722 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		387973472B469116009A01F3 /* SmartPaintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973462B469116009A01F3 /* SmartPaintApp.swift */; };
+		387973492B469116009A01F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973482B469116009A01F3 /* ContentView.swift */; };
+		3879734B2B469118009A01F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3879734A2B469118009A01F3 /* Assets.xcassets */; };
+		3879734E2B469118009A01F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3879734D2B469118009A01F3 /* Preview Assets.xcassets */; };
+		387973582B469118009A01F3 /* SmartPaintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973572B469118009A01F3 /* SmartPaintTests.swift */; };
+		387973622B469118009A01F3 /* SmartPaintUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973612B469118009A01F3 /* SmartPaintUITests.swift */; };
+		387973642B469118009A01F3 /* SmartPaintUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973632B469118009A01F3 /* SmartPaintUITestsLaunchTests.swift */; };
+		387973712B469228009A01F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 387973702B469228009A01F3 /* GoogleService-Info.plist */; };
+		387973742B4693AA009A01F3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 387973732B4693AA009A01F3 /* FirebaseAuth */; };
+		387973782B4693F7009A01F3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973772B4693F7009A01F3 /* LoginView.swift */; };
+		3879737B2B46AF24009A01F3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3879737A2B46AF24009A01F3 /* FirebaseFirestore */; };
+		3879737D2B46AF24009A01F3 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3879737C2B46AF24009A01F3 /* FirebaseFirestoreSwift */; };
+		3879737F2B46AF24009A01F3 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3879737E2B46AF24009A01F3 /* FirebaseStorage */; };
+		387973812B46B10D009A01F3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973802B46B10D009A01F3 /* User.swift */; };
+		387973832B46C430009A01F3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973822B46C430009A01F3 /* LoadingView.swift */; };
+		387973872B46D966009A01F3 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973862B46D966009A01F3 /* RegisterView.swift */; };
+		3879738A2B46DA59009A01F3 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973892B46DA59009A01F3 /* View+Extensions.swift */; };
+		3879738C2B46DABC009A01F3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3879738B2B46DABC009A01F3 /* MainView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		387973542B469118009A01F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3879733B2B469116009A01F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 387973422B469116009A01F3;
+			remoteInfo = SmartPaint;
+		};
+		3879735E2B469118009A01F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3879733B2B469116009A01F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 387973422B469116009A01F3;
+			remoteInfo = SmartPaint;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		387973432B469116009A01F3 /* SmartPaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartPaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		387973462B469116009A01F3 /* SmartPaintApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartPaintApp.swift; sourceTree = "<group>"; };
+		387973482B469116009A01F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3879734A2B469118009A01F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3879734D2B469118009A01F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		387973532B469118009A01F3 /* SmartPaintTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartPaintTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		387973572B469118009A01F3 /* SmartPaintTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartPaintTests.swift; sourceTree = "<group>"; };
+		3879735D2B469118009A01F3 /* SmartPaintUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartPaintUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		387973612B469118009A01F3 /* SmartPaintUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartPaintUITests.swift; sourceTree = "<group>"; };
+		387973632B469118009A01F3 /* SmartPaintUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartPaintUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		387973702B469228009A01F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		387973772B4693F7009A01F3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		387973802B46B10D009A01F3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		387973822B46C430009A01F3 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		387973862B46D966009A01F3 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		387973892B46DA59009A01F3 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		3879738B2B46DABC009A01F3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		387973402B469116009A01F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				387973742B4693AA009A01F3 /* FirebaseAuth in Frameworks */,
+				3879737F2B46AF24009A01F3 /* FirebaseStorage in Frameworks */,
+				3879737B2B46AF24009A01F3 /* FirebaseFirestore in Frameworks */,
+				3879737D2B46AF24009A01F3 /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		387973502B469118009A01F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3879735A2B469118009A01F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3879733A2B469116009A01F3 = {
+			isa = PBXGroup;
+			children = (
+				387973452B469116009A01F3 /* SmartPaint */,
+				387973562B469118009A01F3 /* SmartPaintTests */,
+				387973602B469118009A01F3 /* SmartPaintUITests */,
+				387973442B469116009A01F3 /* Products */,
+				387973792B46AF24009A01F3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		387973442B469116009A01F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				387973432B469116009A01F3 /* SmartPaint.app */,
+				387973532B469118009A01F3 /* SmartPaintTests.xctest */,
+				3879735D2B469118009A01F3 /* SmartPaintUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		387973452B469116009A01F3 /* SmartPaint */ = {
+			isa = PBXGroup;
+			children = (
+				387973762B4693E1009A01F3 /* Model */,
+				387973752B4693D1009A01F3 /* View */,
+				387973702B469228009A01F3 /* GoogleService-Info.plist */,
+				387973462B469116009A01F3 /* SmartPaintApp.swift */,
+				387973482B469116009A01F3 /* ContentView.swift */,
+				3879734A2B469118009A01F3 /* Assets.xcassets */,
+				3879734C2B469118009A01F3 /* Preview Content */,
+			);
+			path = SmartPaint;
+			sourceTree = "<group>";
+		};
+		3879734C2B469118009A01F3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3879734D2B469118009A01F3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		387973562B469118009A01F3 /* SmartPaintTests */ = {
+			isa = PBXGroup;
+			children = (
+				387973572B469118009A01F3 /* SmartPaintTests.swift */,
+			);
+			path = SmartPaintTests;
+			sourceTree = "<group>";
+		};
+		387973602B469118009A01F3 /* SmartPaintUITests */ = {
+			isa = PBXGroup;
+			children = (
+				387973612B469118009A01F3 /* SmartPaintUITests.swift */,
+				387973632B469118009A01F3 /* SmartPaintUITestsLaunchTests.swift */,
+			);
+			path = SmartPaintUITests;
+			sourceTree = "<group>";
+		};
+		387973752B4693D1009A01F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				387973882B46DA3E009A01F3 /* Helpers */,
+				387973852B46D934009A01F3 /* MainView */,
+				387973842B46D91E009A01F3 /* Login */,
+				387973822B46C430009A01F3 /* LoadingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		387973762B4693E1009A01F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				387973802B46B10D009A01F3 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		387973792B46AF24009A01F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		387973842B46D91E009A01F3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				387973772B4693F7009A01F3 /* LoginView.swift */,
+				387973862B46D966009A01F3 /* RegisterView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		387973852B46D934009A01F3 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				3879738B2B46DABC009A01F3 /* MainView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		387973882B46DA3E009A01F3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				387973892B46DA59009A01F3 /* View+Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		387973422B469116009A01F3 /* SmartPaint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 387973672B469118009A01F3 /* Build configuration list for PBXNativeTarget "SmartPaint" */;
+			buildPhases = (
+				3879733F2B469116009A01F3 /* Sources */,
+				387973402B469116009A01F3 /* Frameworks */,
+				387973412B469116009A01F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartPaint;
+			packageProductDependencies = (
+				387973732B4693AA009A01F3 /* FirebaseAuth */,
+				3879737A2B46AF24009A01F3 /* FirebaseFirestore */,
+				3879737C2B46AF24009A01F3 /* FirebaseFirestoreSwift */,
+				3879737E2B46AF24009A01F3 /* FirebaseStorage */,
+			);
+			productName = SmartPaint;
+			productReference = 387973432B469116009A01F3 /* SmartPaint.app */;
+			productType = "com.apple.product-type.application";
+		};
+		387973522B469118009A01F3 /* SmartPaintTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3879736A2B469118009A01F3 /* Build configuration list for PBXNativeTarget "SmartPaintTests" */;
+			buildPhases = (
+				3879734F2B469118009A01F3 /* Sources */,
+				387973502B469118009A01F3 /* Frameworks */,
+				387973512B469118009A01F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				387973552B469118009A01F3 /* PBXTargetDependency */,
+			);
+			name = SmartPaintTests;
+			productName = SmartPaintTests;
+			productReference = 387973532B469118009A01F3 /* SmartPaintTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3879735C2B469118009A01F3 /* SmartPaintUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3879736D2B469118009A01F3 /* Build configuration list for PBXNativeTarget "SmartPaintUITests" */;
+			buildPhases = (
+				387973592B469118009A01F3 /* Sources */,
+				3879735A2B469118009A01F3 /* Frameworks */,
+				3879735B2B469118009A01F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3879735F2B469118009A01F3 /* PBXTargetDependency */,
+			);
+			name = SmartPaintUITests;
+			productName = SmartPaintUITests;
+			productReference = 3879735D2B469118009A01F3 /* SmartPaintUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3879733B2B469116009A01F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					387973422B469116009A01F3 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					387973522B469118009A01F3 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 387973422B469116009A01F3;
+					};
+					3879735C2B469118009A01F3 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 387973422B469116009A01F3;
+					};
+				};
+			};
+			buildConfigurationList = 3879733E2B469116009A01F3 /* Build configuration list for PBXProject "SmartPaint" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3879733A2B469116009A01F3;
+			packageReferences = (
+				387973722B4693AA009A01F3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 387973442B469116009A01F3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				387973422B469116009A01F3 /* SmartPaint */,
+				387973522B469118009A01F3 /* SmartPaintTests */,
+				3879735C2B469118009A01F3 /* SmartPaintUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		387973412B469116009A01F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3879734E2B469118009A01F3 /* Preview Assets.xcassets in Resources */,
+				3879734B2B469118009A01F3 /* Assets.xcassets in Resources */,
+				387973712B469228009A01F3 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		387973512B469118009A01F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3879735B2B469118009A01F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3879733F2B469116009A01F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				387973812B46B10D009A01F3 /* User.swift in Sources */,
+				3879738C2B46DABC009A01F3 /* MainView.swift in Sources */,
+				387973782B4693F7009A01F3 /* LoginView.swift in Sources */,
+				387973492B469116009A01F3 /* ContentView.swift in Sources */,
+				3879738A2B46DA59009A01F3 /* View+Extensions.swift in Sources */,
+				387973872B46D966009A01F3 /* RegisterView.swift in Sources */,
+				387973832B46C430009A01F3 /* LoadingView.swift in Sources */,
+				387973472B469116009A01F3 /* SmartPaintApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3879734F2B469118009A01F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				387973582B469118009A01F3 /* SmartPaintTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		387973592B469118009A01F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				387973622B469118009A01F3 /* SmartPaintUITests.swift in Sources */,
+				387973642B469118009A01F3 /* SmartPaintUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		387973552B469118009A01F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 387973422B469116009A01F3 /* SmartPaint */;
+			targetProxy = 387973542B469118009A01F3 /* PBXContainerItemProxy */;
+		};
+		3879735F2B469118009A01F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 387973422B469116009A01F3 /* SmartPaint */;
+			targetProxy = 3879735E2B469118009A01F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		387973652B469118009A01F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		387973662B469118009A01F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		387973682B469118009A01F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartPaint/Preview Content\"";
+				DEVELOPMENT_TEAM = 3R3569WX7S;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jacky.SmartPaint;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		387973692B469118009A01F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartPaint/Preview Content\"";
+				DEVELOPMENT_TEAM = 3R3569WX7S;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jacky.SmartPaint;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3879736B2B469118009A01F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3R3569WX7S;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jacky.SmartPaintTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartPaint.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmartPaint";
+			};
+			name = Debug;
+		};
+		3879736C2B469118009A01F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3R3569WX7S;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jacky.SmartPaintTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartPaint.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmartPaint";
+			};
+			name = Release;
+		};
+		3879736E2B469118009A01F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3R3569WX7S;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jacky.SmartPaintUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SmartPaint;
+			};
+			name = Debug;
+		};
+		3879736F2B469118009A01F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3R3569WX7S;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jacky.SmartPaintUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SmartPaint;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3879733E2B469116009A01F3 /* Build configuration list for PBXProject "SmartPaint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				387973652B469118009A01F3 /* Debug */,
+				387973662B469118009A01F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		387973672B469118009A01F3 /* Build configuration list for PBXNativeTarget "SmartPaint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				387973682B469118009A01F3 /* Debug */,
+				387973692B469118009A01F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3879736A2B469118009A01F3 /* Build configuration list for PBXNativeTarget "SmartPaintTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3879736B2B469118009A01F3 /* Debug */,
+				3879736C2B469118009A01F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3879736D2B469118009A01F3 /* Build configuration list for PBXNativeTarget "SmartPaintUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3879736E2B469118009A01F3 /* Debug */,
+				3879736F2B469118009A01F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		387973722B4693AA009A01F3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		387973732B4693AA009A01F3 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 387973722B4693AA009A01F3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		3879737A2B46AF24009A01F3 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 387973722B4693AA009A01F3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		3879737C2B46AF24009A01F3 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 387973722B4693AA009A01F3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		3879737E2B46AF24009A01F3 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 387973722B4693AA009A01F3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3879733B2B469116009A01F3 /* Project object */;
+}
