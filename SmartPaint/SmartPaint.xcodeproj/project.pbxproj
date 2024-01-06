@@ -194,6 +194,8 @@
 		387973752B4693D1009A01F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				387973E92B4992C4009A01F3 /* Post */,
+				387973E82B49929A009A01F3 /* Profile */,
 				387973D72B4983C1009A01F3 /* Painting media */,
 				387973C72B498347009A01F3 /* GenerateImage */,
 				387973C42B49833E009A01F3 /* Drawing */,
@@ -233,13 +235,7 @@
 		387973852B46D934009A01F3 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
-				387973C02B498136009A01F3 /* ProfileView.swift */,
 				3879738B2B46DABC009A01F3 /* MainView.swift */,
-				387973C22B49813E009A01F3 /* ReusableProfileContent.swift */,
-				387973E22B498C3B009A01F3 /* PostView.swift */,
-				387973E02B498AF8009A01F3 /* CreateNewPost.swift */,
-				387973E62B498DED009A01F3 /* PostCardView.swift */,
-				387973E42B498C40009A01F3 /* ReusablePostsView.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -281,6 +277,26 @@
 				387973DA2B4983C1009A01F3 /* PaintStyle.swift */,
 			);
 			path = "Painting media";
+			sourceTree = "<group>";
+		};
+		387973E82B49929A009A01F3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				387973C22B49813E009A01F3 /* ReusableProfileContent.swift */,
+				387973C02B498136009A01F3 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		387973E92B4992C4009A01F3 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				387973E42B498C40009A01F3 /* ReusablePostsView.swift */,
+				387973E62B498DED009A01F3 /* PostCardView.swift */,
+				387973E22B498C3B009A01F3 /* PostView.swift */,
+				387973E02B498AF8009A01F3 /* CreateNewPost.swift */,
+			);
+			path = Post;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
