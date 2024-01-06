@@ -11,6 +11,24 @@ struct MainView: View {
     var body: some View {
         //MARK: TabView
         TabView{
+            PaintingMediaView()
+                .tabItem {
+                    Image(systemName: "filemenu.and.selection")
+                    Text("Paint Media")
+                }
+            
+            DrawingView()
+                .tabItem {
+                    Image(systemName: "pencil.and.scribble")
+                    Text("Draw")
+                }
+            
+            PromptView()
+                .tabItem{
+                    Image(systemName: "photo.on.rectangle.angled")
+                    Text("AI Image")
+                }
+            
             Text("Recent Post's")
                 .tabItem {
                     Image(systemName: "rectangle.portrait.on.rectangle.portrait.angled")
