@@ -10,7 +10,19 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         //MARK: TabView
-        print("system")
+        TabView{
+            Text("Recent Post's")
+                .tabItem {
+                    Image(systemName: "rectangle.portrait.on.rectangle.portrait.angled")
+                    Text("Post's")
+                }
+            ProfileView()
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("Profile")
+                }
+        }
+        .tint(.black)
     }
 }
 
