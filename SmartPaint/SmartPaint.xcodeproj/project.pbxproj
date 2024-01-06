@@ -39,6 +39,8 @@
 		387973DB2B4983C1009A01F3 /* PaintStyleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973D82B4983C1009A01F3 /* PaintStyleDetail.swift */; };
 		387973DC2B4983C1009A01F3 /* PaintingMediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973D92B4983C1009A01F3 /* PaintingMediaView.swift */; };
 		387973DD2B4983C1009A01F3 /* PaintStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973DA2B4983C1009A01F3 /* PaintStyle.swift */; };
+		387973DF2B498AA8009A01F3 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973DE2B498AA8009A01F3 /* Post.swift */; };
+		387973E12B498AF8009A01F3 /* CreateNewPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973E02B498AF8009A01F3 /* CreateNewPost.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		387973D82B4983C1009A01F3 /* PaintStyleDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintStyleDetail.swift; sourceTree = "<group>"; };
 		387973D92B4983C1009A01F3 /* PaintingMediaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintingMediaView.swift; sourceTree = "<group>"; };
 		387973DA2B4983C1009A01F3 /* PaintStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintStyle.swift; sourceTree = "<group>"; };
+		387973DE2B498AA8009A01F3 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		387973E02B498AF8009A01F3 /* CreateNewPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewPost.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				387973802B46B10D009A01F3 /* User.swift */,
+				387973DE2B498AA8009A01F3 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 				387973C02B498136009A01F3 /* ProfileView.swift */,
 				3879738B2B46DABC009A01F3 /* MainView.swift */,
 				387973C22B49813E009A01F3 /* ReusableProfileContent.swift */,
+				387973E02B498AF8009A01F3 /* CreateNewPost.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -424,11 +430,13 @@
 				387973492B469116009A01F3 /* ContentView.swift in Sources */,
 				387973D22B498347009A01F3 /* PromptView.swift in Sources */,
 				3879738A2B46DA59009A01F3 /* View+Extensions.swift in Sources */,
+				387973DF2B498AA8009A01F3 /* Post.swift in Sources */,
 				387973D32B498347009A01F3 /* GeneratorViewModel.swift in Sources */,
 				387973872B46D966009A01F3 /* RegisterView.swift in Sources */,
 				387973832B46C430009A01F3 /* LoadingView.swift in Sources */,
 				387973C62B49833E009A01F3 /* DrawingView.swift in Sources */,
 				387973D02B498347009A01F3 /* ImageStyle.swift in Sources */,
+				387973E12B498AF8009A01F3 /* CreateNewPost.swift in Sources */,
 				387973472B469116009A01F3 /* SmartPaintApp.swift in Sources */,
 				387973CE2B498347009A01F3 /* Constants.swift in Sources */,
 				387973DB2B4983C1009A01F3 /* PaintStyleDetail.swift in Sources */,
