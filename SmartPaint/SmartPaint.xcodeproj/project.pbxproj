@@ -48,6 +48,8 @@
 		387973ED2B4AAFBB009A01F3 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973EC2B4AAFBB009A01F3 /* LocationView.swift */; };
 		387973EF2B4AB02A009A01F3 /* LocationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973EE2B4AB02A009A01F3 /* LocationDetail.swift */; };
 		387973F32B4AB756009A01F3 /* Annotatedltem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973F22B4AB756009A01F3 /* Annotatedltem.swift */; };
+		387973F82B4B04A9009A01F3 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 387973F72B4B04A9009A01F3 /* GoogleGenerativeAI */; };
+		387973FA2B4B04B9009A01F3 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973F92B4B04B9009A01F3 /* ChatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,7 @@
 		387973EC2B4AAFBB009A01F3 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		387973EE2B4AB02A009A01F3 /* LocationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetail.swift; sourceTree = "<group>"; };
 		387973F22B4AB756009A01F3 /* Annotatedltem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotatedltem.swift; sourceTree = "<group>"; };
+		387973F92B4B04B9009A01F3 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,7 @@
 				387973742B4693AA009A01F3 /* FirebaseAuth in Frameworks */,
 				3879737F2B46AF24009A01F3 /* FirebaseStorage in Frameworks */,
 				387973D62B498364009A01F3 /* Alamofire in Frameworks */,
+				387973F82B4B04A9009A01F3 /* GoogleGenerativeAI in Frameworks */,
 				3879737B2B46AF24009A01F3 /* FirebaseFirestore in Frameworks */,
 				3879737D2B46AF24009A01F3 /* FirebaseFirestoreSwift in Frameworks */,
 			);
@@ -202,6 +206,7 @@
 		387973752B4693D1009A01F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				387973F52B4B03B4009A01F3 /* Chat */,
 				387973F42B4AD6F8009A01F3 /* Museum */,
 				387973E92B4992C4009A01F3 /* Post */,
 				387973E82B49929A009A01F3 /* Profile */,
@@ -319,6 +324,14 @@
 			path = Museum;
 			sourceTree = "<group>";
 		};
+		387973F52B4B03B4009A01F3 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				387973F92B4B04B9009A01F3 /* ChatView.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -342,6 +355,7 @@
 				3879737E2B46AF24009A01F3 /* FirebaseStorage */,
 				387973BE2B498104009A01F3 /* SDWebImageSwiftUI */,
 				387973D52B498364009A01F3 /* Alamofire */,
+				387973F72B4B04A9009A01F3 /* GoogleGenerativeAI */,
 			);
 			productName = SmartPaint;
 			productReference = 387973432B469116009A01F3 /* SmartPaint.app */;
@@ -419,6 +433,7 @@
 				387973722B4693AA009A01F3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				387973BD2B498104009A01F3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				387973D42B498364009A01F3 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				387973F62B4B04A9009A01F3 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
 			);
 			productRefGroup = 387973442B469116009A01F3 /* Products */;
 			projectDirPath = "";
@@ -485,6 +500,7 @@
 				387973E72B498DED009A01F3 /* PostCardView.swift in Sources */,
 				387973832B46C430009A01F3 /* LoadingView.swift in Sources */,
 				387973C62B49833E009A01F3 /* DrawingView.swift in Sources */,
+				387973FA2B4B04B9009A01F3 /* ChatView.swift in Sources */,
 				387973D02B498347009A01F3 /* ImageStyle.swift in Sources */,
 				387973E12B498AF8009A01F3 /* CreateNewPost.swift in Sources */,
 				387973472B469116009A01F3 /* SmartPaintApp.swift in Sources */,
@@ -851,6 +867,14 @@
 				minimumVersion = 5.8.1;
 			};
 		};
+		387973F62B4B04A9009A01F3 /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/generative-ai-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -883,6 +907,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 387973D42B498364009A01F3 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		387973F72B4B04A9009A01F3 /* GoogleGenerativeAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 387973F62B4B04A9009A01F3 /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
+			productName = GoogleGenerativeAI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
