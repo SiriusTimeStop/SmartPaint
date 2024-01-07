@@ -11,10 +11,10 @@ struct MainView: View {
     var body: some View {
         //MARK: TabView
         TabView{
-            PaintingMediaView()
+            LocationView()
                 .tabItem {
                     Image(systemName: "filemenu.and.selection")
-                    Text("Paint Media")
+                    Text("Museum")
                 }
             
             DrawingView()

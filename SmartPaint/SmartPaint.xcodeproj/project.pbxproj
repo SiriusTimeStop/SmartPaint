@@ -44,6 +44,10 @@
 		387973E32B498C3B009A01F3 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973E22B498C3B009A01F3 /* PostView.swift */; };
 		387973E52B498C40009A01F3 /* ReusablePostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973E42B498C40009A01F3 /* ReusablePostsView.swift */; };
 		387973E72B498DED009A01F3 /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973E62B498DED009A01F3 /* PostCardView.swift */; };
+		387973EB2B4AA53B009A01F3 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973EA2B4AA53B009A01F3 /* Location.swift */; };
+		387973ED2B4AAFBB009A01F3 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973EC2B4AAFBB009A01F3 /* LocationView.swift */; };
+		387973EF2B4AB02A009A01F3 /* LocationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973EE2B4AB02A009A01F3 /* LocationDetail.swift */; };
+		387973F32B4AB756009A01F3 /* Annotatedltem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973F22B4AB756009A01F3 /* Annotatedltem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +102,10 @@
 		387973E22B498C3B009A01F3 /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		387973E42B498C40009A01F3 /* ReusablePostsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusablePostsView.swift; sourceTree = "<group>"; };
 		387973E62B498DED009A01F3 /* PostCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
+		387973EA2B4AA53B009A01F3 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		387973EC2B4AAFBB009A01F3 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		387973EE2B4AB02A009A01F3 /* LocationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetail.swift; sourceTree = "<group>"; };
+		387973F22B4AB756009A01F3 /* Annotatedltem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotatedltem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +202,7 @@
 		387973752B4693D1009A01F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				387973F42B4AD6F8009A01F3 /* Museum */,
 				387973E92B4992C4009A01F3 /* Post */,
 				387973E82B49929A009A01F3 /* Profile */,
 				387973D72B4983C1009A01F3 /* Painting media */,
@@ -212,6 +221,7 @@
 			children = (
 				387973802B46B10D009A01F3 /* User.swift */,
 				387973DE2B498AA8009A01F3 /* Post.swift */,
+				387973EA2B4AA53B009A01F3 /* Location.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,6 +307,16 @@
 				387973E02B498AF8009A01F3 /* CreateNewPost.swift */,
 			);
 			path = Post;
+			sourceTree = "<group>";
+		};
+		387973F42B4AD6F8009A01F3 /* Museum */ = {
+			isa = PBXGroup;
+			children = (
+				387973EC2B4AAFBB009A01F3 /* LocationView.swift */,
+				387973F22B4AB756009A01F3 /* Annotatedltem.swift */,
+				387973EE2B4AB02A009A01F3 /* LocationDetail.swift */,
+			);
+			path = Museum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,11 +464,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				387973DD2B4983C1009A01F3 /* PaintStyle.swift in Sources */,
+				387973F32B4AB756009A01F3 /* Annotatedltem.swift in Sources */,
 				387973E52B498C40009A01F3 /* ReusablePostsView.swift in Sources */,
 				387973812B46B10D009A01F3 /* User.swift in Sources */,
 				387973DC2B4983C1009A01F3 /* PaintingMediaView.swift in Sources */,
 				387973CF2B498347009A01F3 /* GeneratorView.swift in Sources */,
 				387973D12B498347009A01F3 /* OpenAIService.swift in Sources */,
+				387973EB2B4AA53B009A01F3 /* Location.swift in Sources */,
 				387973C12B498136009A01F3 /* ProfileView.swift in Sources */,
 				387973C32B49813E009A01F3 /* ReusableProfileContent.swift in Sources */,
 				3879738C2B46DABC009A01F3 /* MainView.swift in Sources */,
@@ -467,7 +489,9 @@
 				387973E12B498AF8009A01F3 /* CreateNewPost.swift in Sources */,
 				387973472B469116009A01F3 /* SmartPaintApp.swift in Sources */,
 				387973CE2B498347009A01F3 /* Constants.swift in Sources */,
+				387973ED2B4AAFBB009A01F3 /* LocationView.swift in Sources */,
 				387973DB2B4983C1009A01F3 /* PaintStyleDetail.swift in Sources */,
+				387973EF2B4AB02A009A01F3 /* LocationDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,7 +664,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -671,7 +695,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
