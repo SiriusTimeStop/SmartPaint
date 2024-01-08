@@ -67,7 +67,7 @@ struct GeneratorView: View {
         UIImageWriteToSavedPhotosAlbum(uiImage, nil, nil, nil)
     }
 }
-
-#Preview {
-    GeneratorView(viewModel: .init(prompt: "red car", selectedStyle: .threeDRender))
-}
+//
+//#Preview {
+//    GeneratorView(viewModel: .init(prompt: "red car", selectedStyle: .threeDRender))
+//}
