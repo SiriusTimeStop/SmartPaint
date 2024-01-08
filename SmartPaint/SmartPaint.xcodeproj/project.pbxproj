@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		381572092B4BEB9700CD24C4 /* GenerativeAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 381572082B4BEB9700CD24C4 /* GenerativeAI-Info.plist */; };
 		387973472B469116009A01F3 /* SmartPaintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973462B469116009A01F3 /* SmartPaintApp.swift */; };
 		387973492B469116009A01F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973482B469116009A01F3 /* ContentView.swift */; };
 		3879734B2B469118009A01F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3879734A2B469118009A01F3 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		387973F32B4AB756009A01F3 /* Annotatedltem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973F22B4AB756009A01F3 /* Annotatedltem.swift */; };
 		387973F82B4B04A9009A01F3 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 387973F72B4B04A9009A01F3 /* GoogleGenerativeAI */; };
 		387973FA2B4B04B9009A01F3 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973F92B4B04B9009A01F3 /* ChatView.swift */; };
+		387973FC2B4BE8ED009A01F3 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973FB2B4BE8ED009A01F3 /* APIKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		381572082B4BEB9700CD24C4 /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
 		387973432B469116009A01F3 /* SmartPaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartPaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		387973462B469116009A01F3 /* SmartPaintApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartPaintApp.swift; sourceTree = "<group>"; };
 		387973482B469116009A01F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +112,7 @@
 		387973EE2B4AB02A009A01F3 /* LocationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetail.swift; sourceTree = "<group>"; };
 		387973F22B4AB756009A01F3 /* Annotatedltem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotatedltem.swift; sourceTree = "<group>"; };
 		387973F92B4B04B9009A01F3 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		387973FB2B4BE8ED009A01F3 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +332,8 @@
 			isa = PBXGroup;
 			children = (
 				387973F92B4B04B9009A01F3 /* ChatView.swift */,
+				387973FB2B4BE8ED009A01F3 /* APIKey.swift */,
+				381572082B4BEB9700CD24C4 /* GenerativeAI-Info.plist */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -453,6 +459,7 @@
 			files = (
 				3879734E2B469118009A01F3 /* Preview Assets.xcassets in Resources */,
 				3879734B2B469118009A01F3 /* Assets.xcassets in Resources */,
+				381572092B4BEB9700CD24C4 /* GenerativeAI-Info.plist in Resources */,
 				387973712B469228009A01F3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +512,7 @@
 				387973E12B498AF8009A01F3 /* CreateNewPost.swift in Sources */,
 				387973472B469116009A01F3 /* SmartPaintApp.swift in Sources */,
 				387973CE2B498347009A01F3 /* Constants.swift in Sources */,
+				387973FC2B4BE8ED009A01F3 /* APIKey.swift in Sources */,
 				387973ED2B4AAFBB009A01F3 /* LocationView.swift in Sources */,
 				387973DB2B4983C1009A01F3 /* PaintStyleDetail.swift in Sources */,
 				387973EF2B4AB02A009A01F3 /* LocationDetail.swift in Sources */,
