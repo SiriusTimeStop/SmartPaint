@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MultiurnChatView: View {
+struct ChatView: View {
     @State var textInput = ""
     @State var logoAnimating = false
     @State var timer: Timer?
@@ -95,5 +95,5 @@ struct MultiurnChatView: View {
 }
 
 #Preview {
-    MultiurnChatView()
+    ChatView()
 }

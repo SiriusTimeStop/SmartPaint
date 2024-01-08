@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		381572092B4BEB9700CD24C4 /* GenerativeAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 381572082B4BEB9700CD24C4 /* GenerativeAI-Info.plist */; };
-		3815720F2B4BF17100CD24C4 /* MultiurnChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3815720E2B4BF17100CD24C4 /* MultiurnChatView.swift */; };
+		3815720F2B4BF17100CD24C4 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3815720E2B4BF17100CD24C4 /* ChatView.swift */; };
 		381572112B4BF1C500CD24C4 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381572102B4BF1C500CD24C4 /* ChatService.swift */; };
 		381572132B4C469000CD24C4 /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381572122B4C469000CD24C4 /* ChatBubbleShape.swift */; };
 		381572152B4C469600CD24C4 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381572142B4C469600CD24C4 /* ChatBubble.swift */; };
@@ -76,7 +76,7 @@
 
 /* Begin PBXFileReference section */
 		381572082B4BEB9700CD24C4 /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
-		3815720E2B4BF17100CD24C4 /* MultiurnChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiurnChatView.swift; sourceTree = "<group>"; };
+		3815720E2B4BF17100CD24C4 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		381572102B4BF1C500CD24C4 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		381572122B4C469000CD24C4 /* ChatBubbleShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubbleShape.swift; sourceTree = "<group>"; };
 		381572142B4C469600CD24C4 /* ChatBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
@@ -341,7 +341,7 @@
 				381572082B4BEB9700CD24C4 /* GenerativeAI-Info.plist */,
 				381572142B4C469600CD24C4 /* ChatBubble.swift */,
 				381572122B4C469000CD24C4 /* ChatBubbleShape.swift */,
-				3815720E2B4BF17100CD24C4 /* MultiurnChatView.swift */,
+				3815720E2B4BF17100CD24C4 /* ChatView.swift */,
 				381572102B4BF1C500CD24C4 /* ChatService.swift */,
 			);
 			path = Chat;
@@ -507,7 +507,7 @@
 				387973C32B49813E009A01F3 /* ReusableProfileContent.swift in Sources */,
 				3879738C2B46DABC009A01F3 /* MainView.swift in Sources */,
 				387973782B4693F7009A01F3 /* LoginView.swift in Sources */,
-				3815720F2B4BF17100CD24C4 /* MultiurnChatView.swift in Sources */,
+				3815720F2B4BF17100CD24C4 /* ChatView.swift in Sources */,
 				387973492B469116009A01F3 /* ContentView.swift in Sources */,
 				387973D22B498347009A01F3 /* PromptView.swift in Sources */,
 				3879738A2B46DA59009A01F3 /* View+Extensions.swift in Sources */,

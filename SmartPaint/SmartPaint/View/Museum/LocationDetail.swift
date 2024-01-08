@@ -20,9 +20,20 @@ struct LocationDetail: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 350)
                 
-                Text(location.locationName)
-                    .font(.title)
-                    .bold()
+                HStack{
+                    Image("ellipsis.message")
+                        .frame(width: 10,height: 10,alignment: .trailing)
+                    Spacer()
+                    Text(location.locationName)
+                        .font(.title)
+                        .bold()
+                    Spacer()
+                    NavigationLink(destination: ChatView()){
+                            Image(systemName: "ellipsis.message")
+                            .foregroundColor(.black)
+                        }
+                    .frame(width: 20,height: 20,alignment: .trailing)
+                }
                 
                 Text(location.locationCountry)
                     .font(.callout)
@@ -36,7 +47,6 @@ struct LocationDetail: View {
                 }
                 .frame(height: 300)
                 .padding(.top,10)
-                
             }
             .padding(.horizontal)
         }
