@@ -13,6 +13,8 @@
 		381572132B4C469000CD24C4 /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381572122B4C469000CD24C4 /* ChatBubbleShape.swift */; };
 		381572152B4C469600CD24C4 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381572142B4C469600CD24C4 /* ChatBubble.swift */; };
 		381572192B4D435100CD24C4 /* WorldFamousPainting 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 381572182B4D435100CD24C4 /* WorldFamousPainting 1.mlmodel */; };
+		3815721D2B4DA0E700CD24C4 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3815721C2B4DA0E700CD24C4 /* ImagePicker.swift */; };
+		3815721F2B4DA0FE00CD24C4 /* VisionClassfier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3815721E2B4DA0FE00CD24C4 /* VisionClassfier.swift */; };
 		387973472B469116009A01F3 /* SmartPaintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973462B469116009A01F3 /* SmartPaintApp.swift */; };
 		387973492B469116009A01F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973482B469116009A01F3 /* ContentView.swift */; };
 		3879734B2B469118009A01F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3879734A2B469118009A01F3 /* Assets.xcassets */; };
@@ -82,6 +84,9 @@
 		381572122B4C469000CD24C4 /* ChatBubbleShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubbleShape.swift; sourceTree = "<group>"; };
 		381572142B4C469600CD24C4 /* ChatBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		381572182B4D435100CD24C4 /* WorldFamousPainting 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "WorldFamousPainting 1.mlmodel"; sourceTree = "<group>"; };
+		3815721B2B4D4D3600CD24C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3815721C2B4DA0E700CD24C4 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		3815721E2B4DA0FE00CD24C4 /* VisionClassfier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisionClassfier.swift; sourceTree = "<group>"; };
 		387973432B469116009A01F3 /* SmartPaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartPaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		387973462B469116009A01F3 /* SmartPaintApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartPaintApp.swift; sourceTree = "<group>"; };
 		387973482B469116009A01F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -155,6 +160,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3815721A2B4D450B00CD24C4 /* ImagePredict */ = {
+			isa = PBXGroup;
+			children = (
+				3815721C2B4DA0E700CD24C4 /* ImagePicker.swift */,
+				3815721E2B4DA0FE00CD24C4 /* VisionClassfier.swift */,
+			);
+			path = ImagePredict;
+			sourceTree = "<group>";
+		};
 		3879733A2B469116009A01F3 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +193,7 @@
 		387973452B469116009A01F3 /* SmartPaint */ = {
 			isa = PBXGroup;
 			children = (
+				3815721B2B4D4D3600CD24C4 /* Info.plist */,
 				381572182B4D435100CD24C4 /* WorldFamousPainting 1.mlmodel */,
 				387973762B4693E1009A01F3 /* Model */,
 				387973752B4693D1009A01F3 /* View */,
@@ -219,6 +234,7 @@
 		387973752B4693D1009A01F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3815721A2B4D450B00CD24C4 /* ImagePredict */,
 				387973F52B4B03B4009A01F3 /* Chat */,
 				387973F42B4AD6F8009A01F3 /* Museum */,
 				387973E92B4992C4009A01F3 /* Post */,
@@ -509,6 +525,7 @@
 				387973C12B498136009A01F3 /* ProfileView.swift in Sources */,
 				387973C32B49813E009A01F3 /* ReusableProfileContent.swift in Sources */,
 				3879738C2B46DABC009A01F3 /* MainView.swift in Sources */,
+				3815721F2B4DA0FE00CD24C4 /* VisionClassfier.swift in Sources */,
 				387973782B4693F7009A01F3 /* LoginView.swift in Sources */,
 				3815720F2B4BF17100CD24C4 /* ChatView.swift in Sources */,
 				387973492B469116009A01F3 /* ContentView.swift in Sources */,
@@ -518,6 +535,7 @@
 				387973D32B498347009A01F3 /* GeneratorViewModel.swift in Sources */,
 				387973E32B498C3B009A01F3 /* PostView.swift in Sources */,
 				387973872B46D966009A01F3 /* RegisterView.swift in Sources */,
+				3815721D2B4DA0E700CD24C4 /* ImagePicker.swift in Sources */,
 				387973E72B498DED009A01F3 /* PostCardView.swift in Sources */,
 				387973832B46C430009A01F3 /* LoadingView.swift in Sources */,
 				387973C62B49833E009A01F3 /* DrawingView.swift in Sources */,
@@ -698,6 +716,8 @@
 				DEVELOPMENT_TEAM = 3R3569WX7S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SmartPaint/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow to use";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow to save";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -729,6 +749,8 @@
 				DEVELOPMENT_TEAM = 3R3569WX7S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SmartPaint/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow to use";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow to save";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
