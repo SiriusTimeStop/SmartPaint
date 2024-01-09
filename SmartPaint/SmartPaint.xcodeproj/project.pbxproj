@@ -12,6 +12,7 @@
 		381572112B4BF1C500CD24C4 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381572102B4BF1C500CD24C4 /* ChatService.swift */; };
 		381572132B4C469000CD24C4 /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381572122B4C469000CD24C4 /* ChatBubbleShape.swift */; };
 		381572152B4C469600CD24C4 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381572142B4C469600CD24C4 /* ChatBubble.swift */; };
+		381572192B4D435100CD24C4 /* WorldFamousPainting 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 381572182B4D435100CD24C4 /* WorldFamousPainting 1.mlmodel */; };
 		387973472B469116009A01F3 /* SmartPaintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973462B469116009A01F3 /* SmartPaintApp.swift */; };
 		387973492B469116009A01F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973482B469116009A01F3 /* ContentView.swift */; };
 		3879734B2B469118009A01F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3879734A2B469118009A01F3 /* Assets.xcassets */; };
@@ -80,6 +81,7 @@
 		381572102B4BF1C500CD24C4 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		381572122B4C469000CD24C4 /* ChatBubbleShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubbleShape.swift; sourceTree = "<group>"; };
 		381572142B4C469600CD24C4 /* ChatBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		381572182B4D435100CD24C4 /* WorldFamousPainting 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "WorldFamousPainting 1.mlmodel"; sourceTree = "<group>"; };
 		387973432B469116009A01F3 /* SmartPaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartPaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		387973462B469116009A01F3 /* SmartPaintApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartPaintApp.swift; sourceTree = "<group>"; };
 		387973482B469116009A01F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 		387973452B469116009A01F3 /* SmartPaint */ = {
 			isa = PBXGroup;
 			children = (
+				381572182B4D435100CD24C4 /* WorldFamousPainting 1.mlmodel */,
 				387973762B4693E1009A01F3 /* Model */,
 				387973752B4693D1009A01F3 /* View */,
 				387973702B469228009A01F3 /* GoogleService-Info.plist */,
@@ -525,6 +528,7 @@
 				387973FC2B4BE8ED009A01F3 /* APIKey.swift in Sources */,
 				381572132B4C469000CD24C4 /* ChatBubbleShape.swift in Sources */,
 				387973ED2B4AAFBB009A01F3 /* LocationView.swift in Sources */,
+				381572192B4D435100CD24C4 /* WorldFamousPainting 1.mlmodel in Sources */,
 				387973DB2B4983C1009A01F3 /* PaintStyleDetail.swift in Sources */,
 				387973EF2B4AB02A009A01F3 /* LocationDetail.swift in Sources */,
 				381572112B4BF1C500CD24C4 /* ChatService.swift in Sources */,
