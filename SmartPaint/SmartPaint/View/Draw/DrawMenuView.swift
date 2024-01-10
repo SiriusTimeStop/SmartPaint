@@ -34,6 +34,7 @@ struct DrawMenuView: View {
             
             Button(action: {
                 sheetPresentedAI = true
+                
             }){
                 VStack{
                     Image("AIDraw")
