@@ -22,10 +22,10 @@ struct LocationDetail: View {
                 
                 HStack{
                     Image("ellipsis.message")
-                        .frame(width: 10,height: 10,alignment: .trailing)
+                        .frame(width: 20,height: 20,alignment: .trailing)
                     Spacer()
                     Text(location.locationName)
-                        .font(.title)
+                        .font(.title2)
                         .bold()
                     Spacer()
                     NavigationLink(destination: ChatView()){

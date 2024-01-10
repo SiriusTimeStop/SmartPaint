@@ -76,7 +76,6 @@ struct ImagePredictView: View {
                             self.classificationLabel = result
                         }
                     }
-                    
                 }
                 .fontWeight(.semibold)
                 .padding(.horizontal,45)

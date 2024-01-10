@@ -23,16 +23,10 @@ struct MainView: View {
                     Text("AI Predict")
                 }
             
-            DrawingView()
+            DrawMenuView()
                 .tabItem {
                     Image(systemName: "pencil.and.scribble")
                     Text("Draw")
-                }
-            
-            PromptView()
-                .tabItem{
-                    Image(systemName: "photo.on.rectangle.angled")
-                    Text("AI Image")
                 }
             
             PostView()

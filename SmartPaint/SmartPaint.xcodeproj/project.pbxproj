@@ -16,6 +16,7 @@
 		3815721D2B4DA0E700CD24C4 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3815721C2B4DA0E700CD24C4 /* ImagePicker.swift */; };
 		3815721F2B4DA0FE00CD24C4 /* VisionClassfier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3815721E2B4DA0FE00CD24C4 /* VisionClassfier.swift */; };
 		381572212B4EA20100CD24C4 /* ImagePredictView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381572202B4EA20100CD24C4 /* ImagePredictView.swift */; };
+		381572252B4ED9C700CD24C4 /* DrawMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381572242B4ED9C700CD24C4 /* DrawMenuView.swift */; };
 		387973472B469116009A01F3 /* SmartPaintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973462B469116009A01F3 /* SmartPaintApp.swift */; };
 		387973492B469116009A01F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973482B469116009A01F3 /* ContentView.swift */; };
 		3879734B2B469118009A01F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3879734A2B469118009A01F3 /* Assets.xcassets */; };
@@ -89,6 +90,7 @@
 		3815721C2B4DA0E700CD24C4 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3815721E2B4DA0FE00CD24C4 /* VisionClassfier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisionClassfier.swift; sourceTree = "<group>"; };
 		381572202B4EA20100CD24C4 /* ImagePredictView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePredictView.swift; sourceTree = "<group>"; };
+		381572242B4ED9C700CD24C4 /* DrawMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawMenuView.swift; sourceTree = "<group>"; };
 		387973432B469116009A01F3 /* SmartPaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartPaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		387973462B469116009A01F3 /* SmartPaintApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartPaintApp.swift; sourceTree = "<group>"; };
 		387973482B469116009A01F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -172,6 +174,16 @@
 			path = ImagePredict;
 			sourceTree = "<group>";
 		};
+		381572232B4ED9AD00CD24C4 /* Draw */ = {
+			isa = PBXGroup;
+			children = (
+				387973C72B498347009A01F3 /* GenerateImage */,
+				387973C42B49833E009A01F3 /* ManualDrawing */,
+				381572242B4ED9C700CD24C4 /* DrawMenuView.swift */,
+			);
+			path = Draw;
+			sourceTree = "<group>";
+		};
 		3879733A2B469116009A01F3 = {
 			isa = PBXGroup;
 			children = (
@@ -237,14 +249,13 @@
 		387973752B4693D1009A01F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				381572232B4ED9AD00CD24C4 /* Draw */,
 				3815721A2B4D450B00CD24C4 /* ImagePredict */,
 				387973F52B4B03B4009A01F3 /* Chat */,
 				387973F42B4AD6F8009A01F3 /* Museum */,
 				387973E92B4992C4009A01F3 /* Post */,
 				387973E82B49929A009A01F3 /* Profile */,
 				387973D72B4983C1009A01F3 /* Painting media */,
-				387973C72B498347009A01F3 /* GenerateImage */,
-				387973C42B49833E009A01F3 /* Drawing */,
 				387973882B46DA3E009A01F3 /* Helpers */,
 				387973852B46D934009A01F3 /* MainView */,
 				387973842B46D91E009A01F3 /* Login */,
@@ -295,12 +306,12 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		387973C42B49833E009A01F3 /* Drawing */ = {
+		387973C42B49833E009A01F3 /* ManualDrawing */ = {
 			isa = PBXGroup;
 			children = (
 				387973C52B49833E009A01F3 /* DrawingView.swift */,
 			);
-			path = Drawing;
+			path = ManualDrawing;
 			sourceTree = "<group>";
 		};
 		387973C72B498347009A01F3 /* GenerateImage */ = {
@@ -523,6 +534,7 @@
 				387973DC2B4983C1009A01F3 /* PaintingMediaView.swift in Sources */,
 				387973CF2B498347009A01F3 /* GeneratorView.swift in Sources */,
 				381572152B4C469600CD24C4 /* ChatBubble.swift in Sources */,
+				381572252B4ED9C700CD24C4 /* DrawMenuView.swift in Sources */,
 				387973D12B498347009A01F3 /* OpenAIService.swift in Sources */,
 				387973EB2B4AA53B009A01F3 /* Location.swift in Sources */,
 				387973C12B498136009A01F3 /* ProfileView.swift in Sources */,
