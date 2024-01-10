@@ -17,6 +17,12 @@ struct MainView: View {
                     Text("Museum")
                 }
             
+            ImagePredictView()
+                .tabItem {
+                    Image(systemName: "filemenu.and.selection")
+                    Text("AI Predict")
+                }
+            
             DrawingView()
                 .tabItem {
                     Image(systemName: "pencil.and.scribble")
