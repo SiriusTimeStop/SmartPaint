@@ -17,6 +17,10 @@
 		3815721F2B4DA0FE00CD24C4 /* VisionClassfier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3815721E2B4DA0FE00CD24C4 /* VisionClassfier.swift */; };
 		381572212B4EA20100CD24C4 /* ImagePredictView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381572202B4EA20100CD24C4 /* ImagePredictView.swift */; };
 		381572252B4ED9C700CD24C4 /* DrawMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381572242B4ED9C700CD24C4 /* DrawMenuView.swift */; };
+		381572562B4FFC9500CD24C4 /* MyImagesDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 381572542B4FFC9500CD24C4 /* MyImagesDataModel.xcdatamodeld */; };
+		381572582B4FFD0000CD24C4 /* MyImagesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381572572B4FFD0000CD24C4 /* MyImagesContainer.swift */; };
+		3815725B2B4FFD9200CD24C4 /* CoreImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3815725A2B4FFD9200CD24C4 /* CoreImagePicker.swift */; };
+		3815725D2B4FFDCA00CD24C4 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3815725C2B4FFDCA00CD24C4 /* FileManager+Extension.swift */; };
 		387973472B469116009A01F3 /* SmartPaintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973462B469116009A01F3 /* SmartPaintApp.swift */; };
 		387973492B469116009A01F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973482B469116009A01F3 /* ContentView.swift */; };
 		3879734B2B469118009A01F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3879734A2B469118009A01F3 /* Assets.xcassets */; };
@@ -91,6 +95,10 @@
 		3815721E2B4DA0FE00CD24C4 /* VisionClassfier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisionClassfier.swift; sourceTree = "<group>"; };
 		381572202B4EA20100CD24C4 /* ImagePredictView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePredictView.swift; sourceTree = "<group>"; };
 		381572242B4ED9C700CD24C4 /* DrawMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawMenuView.swift; sourceTree = "<group>"; };
+		381572552B4FFC9500CD24C4 /* MyImagesDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyImagesDataModel.xcdatamodel; sourceTree = "<group>"; };
+		381572572B4FFD0000CD24C4 /* MyImagesContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyImagesContainer.swift; sourceTree = "<group>"; };
+		3815725A2B4FFD9200CD24C4 /* CoreImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreImagePicker.swift; sourceTree = "<group>"; };
+		3815725C2B4FFDCA00CD24C4 /* FileManager+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 		387973432B469116009A01F3 /* SmartPaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartPaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		387973462B469116009A01F3 /* SmartPaintApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartPaintApp.swift; sourceTree = "<group>"; };
 		387973482B469116009A01F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -184,6 +192,24 @@
 			path = Draw;
 			sourceTree = "<group>";
 		};
+		381572532B4FFC6F00CD24C4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				381572572B4FFD0000CD24C4 /* MyImagesContainer.swift */,
+				381572542B4FFC9500CD24C4 /* MyImagesDataModel.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		381572592B4FFD7500CD24C4 /* CoreDataView */ = {
+			isa = PBXGroup;
+			children = (
+				3815725A2B4FFD9200CD24C4 /* CoreImagePicker.swift */,
+				3815725C2B4FFDCA00CD24C4 /* FileManager+Extension.swift */,
+			);
+			path = CoreDataView;
+			sourceTree = "<group>";
+		};
 		3879733A2B469116009A01F3 = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +236,7 @@
 			children = (
 				3815721B2B4D4D3600CD24C4 /* Info.plist */,
 				381572182B4D435100CD24C4 /* WorldFamousPainting 1.mlmodel */,
+				381572532B4FFC6F00CD24C4 /* CoreData */,
 				387973762B4693E1009A01F3 /* Model */,
 				387973752B4693D1009A01F3 /* View */,
 				387973702B469228009A01F3 /* GoogleService-Info.plist */,
@@ -249,6 +276,7 @@
 		387973752B4693D1009A01F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				381572592B4FFD7500CD24C4 /* CoreDataView */,
 				381572232B4ED9AD00CD24C4 /* Draw */,
 				3815721A2B4D450B00CD24C4 /* ImagePredict */,
 				387973F52B4B03B4009A01F3 /* Chat */,
@@ -529,11 +557,14 @@
 			files = (
 				387973DD2B4983C1009A01F3 /* PaintStyle.swift in Sources */,
 				387973F32B4AB756009A01F3 /* Annotatedltem.swift in Sources */,
+				381572582B4FFD0000CD24C4 /* MyImagesContainer.swift in Sources */,
+				3815725B2B4FFD9200CD24C4 /* CoreImagePicker.swift in Sources */,
 				387973E52B498C40009A01F3 /* ReusablePostsView.swift in Sources */,
 				387973812B46B10D009A01F3 /* User.swift in Sources */,
 				387973DC2B4983C1009A01F3 /* PaintingMediaView.swift in Sources */,
 				387973CF2B498347009A01F3 /* GeneratorView.swift in Sources */,
 				381572152B4C469600CD24C4 /* ChatBubble.swift in Sources */,
+				3815725D2B4FFDCA00CD24C4 /* FileManager+Extension.swift in Sources */,
 				381572252B4ED9C700CD24C4 /* DrawMenuView.swift in Sources */,
 				387973D12B498347009A01F3 /* OpenAIService.swift in Sources */,
 				387973EB2B4AA53B009A01F3 /* Location.swift in Sources */,
@@ -564,6 +595,7 @@
 				387973ED2B4AAFBB009A01F3 /* LocationView.swift in Sources */,
 				381572192B4D435100CD24C4 /* WorldFamousPainting 1.mlmodel in Sources */,
 				387973DB2B4983C1009A01F3 /* PaintStyleDetail.swift in Sources */,
+				381572562B4FFC9500CD24C4 /* MyImagesDataModel.xcdatamodeld in Sources */,
 				387973EF2B4AB02A009A01F3 /* LocationDetail.swift in Sources */,
 				381572112B4BF1C500CD24C4 /* ChatService.swift in Sources */,
 			);
@@ -976,6 +1008,19 @@
 			productName = GoogleGenerativeAI;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		381572542B4FFC9500CD24C4 /* MyImagesDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				381572552B4FFC9500CD24C4 /* MyImagesDataModel.xcdatamodel */,
+			);
+			currentVersion = 381572552B4FFC9500CD24C4 /* MyImagesDataModel.xcdatamodel */;
+			path = MyImagesDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3879733B2B469116009A01F3 /* Project object */;
 }

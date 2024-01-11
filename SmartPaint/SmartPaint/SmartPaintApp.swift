@@ -16,6 +16,10 @@ struct SmartPaintApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.managedObjectContext,MyImagesContainer().persistentContainer.viewContext)
+                .onAppear{
+                    print(URL.documentsDirectory.path)
+                }
         }
     }
 }
