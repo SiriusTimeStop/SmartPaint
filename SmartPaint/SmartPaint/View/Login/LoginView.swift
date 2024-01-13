@@ -112,17 +112,17 @@ struct LoginView: View {
     @ViewBuilder
     private var verticalLayout: some View {
         VStack(spacing: 10){
-            VStack(alignment: .leading, spacing: 10) {
+            VStack(alignment: .center, spacing: 10) {
                 Text("SmartPaint")
                     .font(.largeTitle.bold())
                 
                 Text("Sign In SmartPaint Account")
                     .font(.title3)
-                
-                Image("AppLogo")
-                    .resizable()
-                    .scaledToFit()
             }
+            Image("AppLogo")
+                .resizable()
+                .scaledToFit()
+                .padding(.top,37)
             
             VStack(spacing: 12){
                 TextField("Email",text: $emailID)

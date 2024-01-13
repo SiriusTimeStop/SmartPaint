@@ -28,7 +28,21 @@ struct CreateNewPost: View {
     @State private var photoItem: PhotosPickerItem?
     @FocusState private var showKeyboard: Bool
     
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    
     var body: some View {
+        
+        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
+            verticalLayout
+        } else {
+            horizontalLayout
+        }
+    }
+    
+    @ViewBuilder
+    private var verticalLayout: some View{
+        
         VStack{
             HStack{
                 Menu{
@@ -89,6 +103,118 @@ struct CreateNewPost: View {
                     }
                     TextField("What's happening",text: $postText,axis: .vertical)
                         .focused($showKeyboard)
+                }
+                .padding(15)
+            }
+            Divider()
+            
+            HStack{
+                Button{
+                    showImagePicker.toggle()
+                }label: {
+                    Image(systemName: "photo.on.rectangle")
+                        .font(.title3)
+                }
+                .hAlign(.leading)
+                
+                Button("Done"){
+                    showKeyboard = false
+                }
+            }
+            .foregroundColor(.black)
+            .padding(.horizontal,15)
+            .padding(.vertical,10)
+        }
+        .vAlign(.top)
+        .photosPicker(isPresented: $showImagePicker, selection: $photoItem)
+        .onChange(of: photoItem){
+            newValue in
+            if let newValue{
+                Task{
+                    if let rawImageData = try? await newValue.loadTransferable(type: Data.self),
+                       let image = UIImage(data: rawImageData),
+                       let compressedImageData = image.jpegData(compressionQuality: 0.5){
+                        //MARK: UI must be done
+                        await MainActor.run(body: {
+                            postImageData = compressedImageData
+                            photoItem = nil
+                        })
+                        
+                    }
+                }
+            }
+        }
+        .alert(errorMessage, isPresented: $showError, actions: {})
+        //MARK: loading view
+        .overlay{
+            LoadingView(show: $isloading)
+        }
+    }
+    
+    @ViewBuilder
+    private var horizontalLayout: some View{
+        VStack{
+            HStack{
+                Menu{
+                    Button("Cancel",role: .destructive){
+                        dismiss()
+                    }
+                }label: {
+                    Text("Cancel")
+                        .font(.callout)
+                        .foregroundColor(.black)
+                    
+                }
+                .hAlign(.leading)
+                
+                Button(action:createPost){
+                    Text("Post")
+                        .font(.callout)
+                        .foregroundColor(.white)
+                        .padding(.horizontal,20)
+                        .padding(.vertical,6)
+                        .background(.black,in: Capsule())
+                }
+                .disableWithOpacity(postText == "")
+            }
+            .padding(.horizontal,15)
+            .padding(.vertical,10)
+            .background{
+                Rectangle()
+                    .fill(.gray.opacity(0.05))
+                    .ignoresSafeArea()
+            }
+            ScrollView(.vertical,showsIndicators: false){
+                VStack(spacing: 15){
+                    HStack{
+                        if let postImageData, let image = UIImage(data: postImageData){
+                            GeometryReader{
+                                let size = $0.size
+                                Image(uiImage: image)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: size.width, height: size.height)
+                                    .clipShape(RoundedRectangle(cornerRadius: 10,style: .continuous))
+                                    .overlay(alignment: .topTrailing) {
+                                        Button{
+                                            withAnimation(.easeInOut(duration: 0.25)){
+                                                self.postImageData = nil
+                                            }
+                                        }label: {
+                                            Image(systemName: "trash")
+                                                .fontWeight(.bold)
+                                                .tint(.red)
+                                        }
+                                        .padding(10)
+                                    }
+                            }
+                            .clipped()
+                            .frame(height: 220)
+                        }
+                        
+                        TextField("What's happening",text: $postText,axis: .vertical)
+                            .focused($showKeyboard)
+                    }
                 }
                 .padding(15)
             }

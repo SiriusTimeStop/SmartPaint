@@ -33,7 +33,20 @@ struct RegisterView: View{
     @AppStorage("user_name") var userNameStored: String = ""
     @AppStorage("user_UID") var userUID: String = ""
     
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    
     var body: some View{
+        
+        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
+            verticalLayout
+        } else {
+            horizontalLayout
+        }
+    }
+    
+    @ViewBuilder
+    private var verticalLayout: some View {
         VStack(spacing: 10){
             Text("Register")
                 .font(.largeTitle.bold())
@@ -92,8 +105,70 @@ struct RegisterView: View{
     }
     
     @ViewBuilder
+    private var horizontalLayout: some View {
+        HStack(spacing: 20){
+            VStack(alignment: .leading,spacing: 10){
+                Text("Register")
+                    .font(.largeTitle.bold())
+                    .hAlign(.leading)
+                
+                Text("Register SmartPaint Account")
+                    .font(.title3)
+                    .hAlign(.leading)
+                
+                //MARK: register button
+                HStack{
+                    Text("Already have an account?")
+                        .foregroundColor(.gray)
+                    
+                    Button("Login Now"){
+                        dismiss()
+                    }
+                    .fontWeight(.bold)
+                    .foregroundColor(.black)
+                }
+                .font(.callout)
+                .hAlign(.leading)
+            }
+            VStack{
+                // MARK: for smaller size optimization
+                ViewThatFits{
+                    ScrollView(.vertical,showsIndicators: false){
+                        HelperView()
+                    }
+                    HelperView()
+                }
+            }
+        }
+        .vAlign(.top)
+        .padding(15)
+        .overlay(content: {
+            LoadingView(show: $isLoading)
+        })
+        .photosPicker(isPresented: $showImagePicker, selection: $photoItem)
+        .onChange(of: photoItem){
+            newValue in
+            //MARK: Extracting UIImage form photoItem
+            if let newValue{
+                Task{
+                    do{
+                        guard let imageData = try await newValue.loadTransferable(type: Data.self) else{return}
+                        
+                        await MainActor.run(body: {
+                            userProfilePicData = imageData
+                        })
+                    }catch{}
+                }
+            }
+        }
+        
+        //MARK: Display alert
+        .alert(errorMessage, isPresented: $showError, actions: {})
+    }
+    
+    @ViewBuilder
     func HelperView() -> some View{
-        VStack(spacing: 12){
+        VStack(spacing: verticalSizeClass == .regular ? 12 : 5){
             ZStack{
                 if let userProfilePicData, let image = UIImage(data: userProfilePicData){
                     Image(uiImage: image)
@@ -111,12 +186,12 @@ struct RegisterView: View{
             .onTapGesture {
                 showImagePicker.toggle()
             }
-            .padding(.top,25)
+            .padding(.top, horizontalSizeClass == .compact ? 25 : 0)
             
             TextField("Username",text: $userName)
                 .textContentType(.emailAddress)
                 .border(1,.gray.opacity(0.5))
-                .padding(.top,25)
+                .padding(.top, horizontalSizeClass == .compact ? 25 : 0)
             
             TextField("Email",text: $emailID)
                 .textContentType(.emailAddress)
@@ -141,7 +216,7 @@ struct RegisterView: View{
                     .font(.title2)
             }
             .disableWithOpacity(userName == "" ||  emailID == "" || password == "" || userProfilePicData == nil)
-            .padding(.top,10)
+            .padding(.top,verticalSizeClass == .regular ? 10 : 5)
         }
     }
     

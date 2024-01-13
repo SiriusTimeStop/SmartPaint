@@ -18,7 +18,19 @@ struct PostCardView: View {
     @AppStorage("user_UID") private var userUID: String = ""
     @State private var docListner: ListenerRegistration?
     
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    
     var body: some View {
+        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
+            verticalLayout
+        } else {
+            horizontalLayout
+        }
+    }
+    
+    @ViewBuilder
+    private var verticalLayout: some View{
         HStack(alignment: .top, spacing: 12){
             WebImage(url: post.userProfileURL)
                 .resizable()
@@ -47,10 +59,92 @@ struct PostCardView: View {
                             .frame(width: size.width, height: size.height)
                             .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                     }
-                    .frame(height: 200)      
+                    .frame(height: 200)
                 }
                 
                 PostInterestion()
+            }
+        }
+        .hAlign(.leading)
+        .overlay(alignment: .topTrailing, content: {
+            //MARK: display delete button
+            if post.userID == userUID{
+                Menu{
+                    Button("Delete Post",role:.destructive,action: deletePost)
+                }label: {
+                    Image(systemName: "ellipsis")
+                        .font(.caption)
+                        .rotationEffect(.init(degrees: -90))
+                        .foregroundColor(.black)
+                        .padding(8)
+                        .contentShape(Rectangle())
+                }
+                .offset(x:8)
+            }
+        })
+        .onAppear{
+            if docListner == nil{
+                guard let postID = post.id else{return}
+                docListner = Firestore.firestore().collection("Posts").document(postID).addSnapshotListener({
+                    snapshot, error in
+                    if let snapshot{
+                        if snapshot.exists{
+                            if let updatedPost = try? snapshot.data(as: Post.self){
+                                onUpdate(updatedPost)
+                            }
+                        }else{
+                            onDelete()
+                        }
+                    }
+                })
+            }
+        }
+        .onDisappear{
+            if let docListner{
+                docListner.remove()
+                self.docListner = nil
+            }
+        }
+    }
+    
+    private var horizontalLayout: some View{
+        HStack(alignment: .center, spacing: 12){
+            VStack(alignment:.center,spacing: 10){
+                WebImage(url: post.userProfileURL)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 105, height: 105)
+                    .clipShape(Circle())
+                
+                VStack(alignment: .center, spacing: 6){
+                    Text(post.userName)
+                        .font(.title)
+                        .fontWeight(.semibold)
+                    Text(post.publishedDate.formatted(date: .numeric, time: .shortened))
+                        .font(.callout)
+                        .foregroundColor(.gray)
+                    Text(post.text)
+                        .textSelection(.enabled)
+                        .font(.title3)
+                    
+                    PostInterestion()
+                }
+            }
+            VStack(alignment:.center){
+                
+                //MARK: post image
+                if let postImageURL = post.imageURL{
+                    GeometryReader{
+                        let size = $0.size
+                        WebImage(url: postImageURL)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: size.width, height: size.height)
+                            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                    }
+                    .frame(height: 250)
+                    .padding(.horizontal,50)
+                }
             }
         }
         .hAlign(.leading)
