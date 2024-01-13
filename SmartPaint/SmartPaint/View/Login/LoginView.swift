@@ -21,6 +21,9 @@ struct LoginView: View {
     @State var errorMessage: String = ""
     @State var isLoading: Bool = false
     
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    
     // MARK: UserDefaults
     @AppStorage("log_status") var logStatus: Bool = false
     @AppStorage("user_profile_url") var profileURL: URL?
@@ -28,27 +31,35 @@ struct LoginView: View {
     @AppStorage("user_UID") var userUID: String = ""
     
     var body: some View {
-        VStack(spacing: 10){
-            Text("SmartPaint")
-                .font(.largeTitle.bold())
-                .hAlign(.leading)
+        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
+            verticalLayout
+        } else {
+            horizontalLayout
+        }
+    }
+    
+    @ViewBuilder
+    private var horizontalLayout: some View {
+        HStack(spacing: 20) {
+            VStack(alignment: .leading, spacing: 10) {
+                Text("SmartPaint")
+                    .font(.largeTitle.bold())
+                
+                Text("Sign In SmartPaint Account")
+                    .font(.title3)
+                
+                Image("AppLogo")
+                    .resizable()
+                    .scaledToFit()
+            }
             
-            Text("Sign In SmartPaint Account")
-                .font(.title3)
-                .hAlign(.leading)
-            
-            Image("AppLogo")
-                .resizable()
-                .scaledToFit()
-                .padding(.top,25)
-            
-            VStack(spacing: 12){
+            VStack(spacing: 12) {
                 TextField("Email",text: $emailID)
                     .textContentType(.emailAddress)
                     .border(1,.gray.opacity(0.5))
                     .padding(.top,25)
                 
-               SecureField("Password",text: $password)
+                SecureField("Password",text: $password)
                     .textContentType(.emailAddress)
                     .border(1,.gray.opacity(0.5))
                 
@@ -56,7 +67,6 @@ struct LoginView: View {
                     .font(.callout)
                     .fontWeight(.medium)
                     .tint(.black)
-                    .hAlign(.trailing)
                 
                 Button {
                     loginUser()
@@ -71,23 +81,94 @@ struct LoginView: View {
                         .font(.title2)
                 }
                 .padding(.top,10)
+                
+                //MARK: register button
+                HStack{
+                    Text("Don't have an account?")
+                        .foregroundColor(.gray)
+                    
+                    Button("Register Now"){
+                        createAccount.toggle()
+                    }
+                    .fontWeight(.bold)
+                    .foregroundColor(.black)
+                }
+                .font(.callout)
+                .vAlign(.bottom)
+            }
+        }
+        .padding(15)
+        .overlay(content: {
+            LoadingView(show: $isLoading)
+        })
+        //MARK: register view via sheets
+        .fullScreenCover(isPresented: $createAccount){
+            RegisterView()
+        }
+        //MARK: Display alert
+        .alert(errorMessage,isPresented: $showError, actions: {})
+    }
+    
+    @ViewBuilder
+    private var verticalLayout: some View {
+        VStack(spacing: 10){
+            VStack(alignment: .leading, spacing: 10) {
+                Text("SmartPaint")
+                    .font(.largeTitle.bold())
+                
+                Text("Sign In SmartPaint Account")
+                    .font(.title3)
+                
+                Image("AppLogo")
+                    .resizable()
+                    .scaledToFit()
             }
             
-            //MARK: register button
-            HStack{
-                Text("Don't have an account?")
-                    .foregroundColor(.gray)
+            VStack(spacing: 12){
+                TextField("Email",text: $emailID)
+                    .textContentType(.emailAddress)
+                    .border(1,.gray.opacity(0.5))
+                    .padding(.top,25)
                 
-                Button("Register Now"){
-                    createAccount.toggle()
+                SecureField("Password",text: $password)
+                    .textContentType(.emailAddress)
+                    .border(1,.gray.opacity(0.5))
+                
+                Button("Reset password?",action: resetPassword)
+                    .font(.callout)
+                    .fontWeight(.medium)
+                    .tint(.black)
+                
+                Button {
+                    loginUser()
+                } label: {
+                    Text("Sign in")
+                        .foregroundColor(.black)
+                        .hAlign(.center)
+                        .frame(height: 54)
+                        .foregroundColor(.white)
+                        .background(.accent)
+                        .cornerRadius(10)
+                        .font(.title2)
                 }
-                .fontWeight(.bold)
-                .foregroundColor(.black)
+                .padding(.top,10)
+                
+                //MARK: register button
+                HStack{
+                    Text("Don't have an account?")
+                        .foregroundColor(.gray)
+                    
+                    Button("Register Now"){
+                        createAccount.toggle()
+                    }
+                    .fontWeight(.bold)
+                    .foregroundColor(.black)
+                }
+                .font(.callout)
+                .vAlign(.bottom)
             }
-            .font(.callout)
-            .vAlign(.bottom)
+            .padding(.top,25)
         }
-        .vAlign(.top)
         .padding(15)
         .overlay(content: {
             LoadingView(show: $isLoading)
@@ -150,6 +231,6 @@ struct LoginView: View {
 }
 
 #Preview {
-   LoginView()
+    LoginView()
 }
 
