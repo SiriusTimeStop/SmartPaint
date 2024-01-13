@@ -38,7 +38,7 @@ struct ImagePredictView: View {
                             .frame(width: geo.size.width, height: geo.size.height)
                     }
                 }
-          
+                
                 Button("Choose Picture") {
                     // open action sheet
                     self.showSheet = true
@@ -47,7 +47,7 @@ struct ImagePredictView: View {
                     .frame(width: 200)
                     .foregroundColor(.white)
                     .background(Color.gray)
-                    .clipShape(Capsule())
+                    .cornerRadius(10)
                     .actionSheet(isPresented: $showSheet) {
                         ActionSheet(title: Text("Select Photo"), message: Text("Choose"), buttons: [
                             .default(Text("Photo Library")) {
@@ -62,8 +62,7 @@ struct ImagePredictView: View {
                             },
                             .cancel()
                         ])
-                        
-                }
+                    }
                 Text(classificationLabel)
                     .font(.system(size: 26))
                     .padding(.top, 20)
@@ -77,16 +76,15 @@ struct ImagePredictView: View {
                         }
                     }
                 }
-                .fontWeight(.semibold)
                 .padding(.horizontal,45)
                 .padding(.vertical,15)
                 .background(Color.yellow.opacity(0.7))
-                .cornerRadius(12)
+                .cornerRadius(10)
                 .foregroundColor(.black)
                 .padding(.bottom,20)
                 Spacer()
             }
-            .navigationBarTitle("Image Classification")
+            .navigationBarTitle("Famous Painting")
         }.sheet(isPresented: $showPhotoOptions) {
             ImagePicker(image: self.$image, isShown: self.$showPhotoOptions, sourceType: self.sourceType)
         }

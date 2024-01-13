@@ -32,7 +32,7 @@ struct LocationDetail: View {
                             Image(systemName: "ellipsis.message")
                             .foregroundColor(.black)
                         }
-                    .frame(width: 20,height: 20,alignment: .trailing)
+                    .frame(width: 20,height: 20)
                 }
                 
                 Text(location.locationCountry)

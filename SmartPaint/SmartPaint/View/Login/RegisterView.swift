@@ -18,7 +18,6 @@ struct RegisterView: View{
     @State var password: String = ""
     @State var userName: String = ""
     @State var userBio: String = ""
-    @State var userBioLink: String = ""
     @State var userProfilePicData: Data?
     
     //MARK: view properties
@@ -36,11 +35,11 @@ struct RegisterView: View{
     
     var body: some View{
         VStack(spacing: 10){
-            Text("Lest Register\nAccount")
+            Text("Register")
                 .font(.largeTitle.bold())
                 .hAlign(.leading)
             
-            Text("Hello user, have a wonderful journey")
+            Text("Register SmartPaint Account")
                 .font(.title3)
                 .hAlign(.leading)
             
@@ -54,7 +53,7 @@ struct RegisterView: View{
             
             //MARK: register button
             HStack{
-                Text("Already Have an account?")
+                Text("Already have an account?")
                     .foregroundColor(.gray)
                 
                 Button("Login Now"){
@@ -117,6 +116,7 @@ struct RegisterView: View{
             TextField("Username",text: $userName)
                 .textContentType(.emailAddress)
                 .border(1,.gray.opacity(0.5))
+                .padding(.top,25)
             
             TextField("Email",text: $emailID)
                 .textContentType(.emailAddress)
@@ -126,22 +126,21 @@ struct RegisterView: View{
                 .textContentType(.emailAddress)
                 .border(1,.gray.opacity(0.5))
             
-            TextField("About you",text: $userBio, axis: .vertical)
-                .frame(minHeight: 100, alignment: .top)
-                .textContentType(.emailAddress)
-                .border(1,.gray.opacity(0.5))
-            
-            TextField("Bio Link (Optional)",text: $userBioLink)
+            TextField("About you (Optional)",text: $userBio)
                 .textContentType(.emailAddress)
                 .border(1,.gray.opacity(0.5))
             
             Button(action: registerUser) {
                 Text("Sign up")
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .hAlign(.center)
-                    .fillView(.black)
+                    .frame(height: 54)
+                    .foregroundColor(.white)
+                    .background(.accent)
+                    .cornerRadius(10)
+                    .font(.title2)
             }
-            .disableWithOpacity(userName == "" || userBio == "" || emailID == "" || password == "" || userProfilePicData == nil)
+            .disableWithOpacity(userName == "" ||  emailID == "" || password == "" || userProfilePicData == nil)
             .padding(.top,10)
         }
     }
@@ -161,7 +160,11 @@ struct RegisterView: View{
                 
                 let downloadURL = try await storageRef.downloadURL()
                 
-                let user = User(username: userName, userBio: userBio, userBioLink: userBioLink, userUID: userUID, userEmail: emailID, userProfileURL: downloadURL)
+                if userBio == ""{
+                    userBio = "Welcom to SmartPaint"
+                }
+                
+                let user = User(username: userName, userBio: userBio, userUID: userUID, userEmail: emailID, userProfileURL: downloadURL)
                 
                 let _ = try Firestore.firestore().collection("Users").document(userUID).setData(from: user,completion: {
                     error in
@@ -191,5 +194,5 @@ struct RegisterView: View{
 }
 
 #Preview {
-   ContentView()
+   RegisterView()
 }

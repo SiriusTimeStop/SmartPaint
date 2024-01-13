@@ -42,17 +42,11 @@ struct ReusableProfileContent: View {
                             .foregroundColor(.gray)
                             .lineLimit(3)
                         
-                        if let bioLink = URL(string: user.userBioLink){
-                            Link(user.userBioLink,destination: bioLink)
-                                .font(.callout)
-                                .tint(.blue)
-                                .lineLimit(1)
-                        }
                     }
                     .hAlign(.leading)
                 }
                 
-                Text("My Image Store")
+                Text("My Image")
                     .font(.title2)
                     .fontWeight(.semibold)
                     .foregroundColor(.black)
@@ -92,7 +86,12 @@ struct ReusableProfileContent: View {
                                      selection: $imagePicker.imageSelection,
                                      matching: .images,
                                      photoLibrary: .shared())
-                        .buttonStyle(.borderedProminent)
+                        .padding(.horizontal,45)
+                        .padding(.vertical,15)
+                        .background(Color.yellow.opacity(0.7))
+                        .cornerRadius(10)
+                        .foregroundColor(.black)
+                        .padding(.bottom,20)
                     }
                 }
                 .onChange(of: imagePicker.uiImage) { newImage in

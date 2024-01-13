@@ -20,6 +20,7 @@ struct LoginView: View {
     @State var showError: Bool = false
     @State var errorMessage: String = ""
     @State var isLoading: Bool = false
+    
     // MARK: UserDefaults
     @AppStorage("log_status") var logStatus: Bool = false
     @AppStorage("user_profile_url") var profileURL: URL?
@@ -28,13 +29,18 @@ struct LoginView: View {
     
     var body: some View {
         VStack(spacing: 10){
-            Text("Lets Sign you in")
+            Text("SmartPaint")
                 .font(.largeTitle.bold())
                 .hAlign(.leading)
             
-            Text("Welcome Back, \nYou have been missed")
+            Text("Sign In SmartPaint Account")
                 .font(.title3)
                 .hAlign(.leading)
+            
+            Image("AppLogo")
+                .resizable()
+                .scaledToFit()
+                .padding(.top,25)
             
             VStack(spacing: 12){
                 TextField("Email",text: $emailID)
@@ -56,9 +62,13 @@ struct LoginView: View {
                     loginUser()
                 } label: {
                     Text("Sign in")
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .hAlign(.center)
-                        .fillView(.black)
+                        .frame(height: 54)
+                        .foregroundColor(.white)
+                        .background(.accent)
+                        .cornerRadius(10)
+                        .font(.title2)
                 }
                 .padding(.top,10)
             }

@@ -13,13 +13,8 @@ enum ImageStyle: String, CaseIterable{
     case gouache1
     case inkWashPaint1
     case charcoal1
-    case surrealism
-    case realism
     case threeDRender
-    case minimalism
-    case abstract
-    case retro
-    case geometric
+    
     
     var title: String{
         switch self {
@@ -33,20 +28,8 @@ enum ImageStyle: String, CaseIterable{
             return "Ink Wash Painting"
         case .charcoal1:
             return "Charcoal"
-        case .surrealism:
-            return "Surrealism"
-        case .realism:
-            return "Realism"
         case .threeDRender:
             return "3D Render"
-        case .minimalism:
-            return "Minimalism"
-        case .abstract:
-            return "Abstract"
-        case .retro:
-            return "Retro"
-        case .geometric:
-            return "Geometric"
         }
     }
 }

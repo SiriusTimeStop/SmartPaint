@@ -40,9 +40,11 @@ struct GeneratorView: View {
                 }label: {
                     Text("Download")
                         .foregroundColor(.black)
-                        .padding()
-                        .background(Color.yellow)
-                        .clipShape(Capsule())
+                        .padding(.horizontal,45)
+                        .padding(.vertical,15)
+                        .background(Color.yellow.opacity(0.7))
+                        .cornerRadius(10)
+                        .padding(.bottom,20)
                 }
                 .padding(.top,20)
             }

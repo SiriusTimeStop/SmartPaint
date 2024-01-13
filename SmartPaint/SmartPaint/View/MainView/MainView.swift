@@ -11,15 +11,15 @@ struct MainView: View {
     var body: some View {
         //MARK: TabView
         TabView{
-            LocationView()
+            PostView()
                 .tabItem {
-                    Image(systemName: "filemenu.and.selection")
-                    Text("Museum")
+                    Image(systemName: "rectangle.portrait.on.rectangle.portrait.angled")
+                    Text("Post's")
                 }
             
             ImagePredictView()
                 .tabItem {
-                    Image(systemName: "filemenu.and.selection")
+                    Image(systemName: "doc.text.image")
                     Text("AI Predict")
                 }
             
@@ -29,11 +29,12 @@ struct MainView: View {
                     Text("Draw")
                 }
             
-            PostView()
+            LocationView()
                 .tabItem {
-                    Image(systemName: "rectangle.portrait.on.rectangle.portrait.angled")
-                    Text("Post's")
+                    Image(systemName: "filemenu.and.selection")
+                    Text("Museum")
                 }
+            
             ProfileView()
                 .tabItem {
                     Image(systemName: "gear")

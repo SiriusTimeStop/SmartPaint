@@ -25,6 +25,7 @@
 		381572632B4FFF5600CD24C4 /* FormType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381572602B4FFF5500CD24C4 /* FormType.swift */; };
 		381572642B4FFF5600CD24C4 /* ImageFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381572612B4FFF5500CD24C4 /* ImageFormView.swift */; };
 		381572682B4FFFE400CD24C4 /* MyImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381572672B4FFFE400CD24C4 /* MyImage+Extension.swift */; };
+		381572882B511C5700CD24C4 /* SlidingTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 381572872B511C5700CD24C4 /* SlidingTabView */; };
 		387973472B469116009A01F3 /* SmartPaintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973462B469116009A01F3 /* SmartPaintApp.swift */; };
 		387973492B469116009A01F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973482B469116009A01F3 /* ContentView.swift */; };
 		3879734B2B469118009A01F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3879734A2B469118009A01F3 /* Assets.xcassets */; };
@@ -155,6 +156,7 @@
 			files = (
 				387973BF2B498104009A01F3 /* SDWebImageSwiftUI in Frameworks */,
 				387973742B4693AA009A01F3 /* FirebaseAuth in Frameworks */,
+				381572882B511C5700CD24C4 /* SlidingTabView in Frameworks */,
 				3879737F2B46AF24009A01F3 /* FirebaseStorage in Frameworks */,
 				387973D62B498364009A01F3 /* Alamofire in Frameworks */,
 				387973F82B4B04A9009A01F3 /* GoogleGenerativeAI in Frameworks */,
@@ -315,6 +317,7 @@
 		387973762B4693E1009A01F3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				387973CA2B498347009A01F3 /* ImageStyle.swift */,
 				387973802B46B10D009A01F3 /* User.swift */,
 				387973DE2B498AA8009A01F3 /* Post.swift */,
 				387973EA2B4AA53B009A01F3 /* Location.swift */,
@@ -367,7 +370,6 @@
 			children = (
 				387973C82B498347009A01F3 /* Constants.swift */,
 				387973C92B498347009A01F3 /* GeneratorView.swift */,
-				387973CA2B498347009A01F3 /* ImageStyle.swift */,
 				387973CB2B498347009A01F3 /* OpenAIService.swift */,
 				387973CC2B498347009A01F3 /* PromptView.swift */,
 				387973CD2B498347009A01F3 /* GeneratorViewModel.swift */,
@@ -452,6 +454,7 @@
 				387973BE2B498104009A01F3 /* SDWebImageSwiftUI */,
 				387973D52B498364009A01F3 /* Alamofire */,
 				387973F72B4B04A9009A01F3 /* GoogleGenerativeAI */,
+				381572872B511C5700CD24C4 /* SlidingTabView */,
 			);
 			productName = SmartPaint;
 			productReference = 387973432B469116009A01F3 /* SmartPaint.app */;
@@ -530,6 +533,7 @@
 				387973BD2B498104009A01F3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				387973D42B498364009A01F3 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				387973F62B4B04A9009A01F3 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
+				381572862B511C5700CD24C4 /* XCRemoteSwiftPackageReference "SlidingTabView" */,
 			);
 			productRefGroup = 387973442B469116009A01F3 /* Products */;
 			projectDirPath = "";
@@ -961,6 +965,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		381572862B511C5700CD24C4 /* XCRemoteSwiftPackageReference "SlidingTabView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/QuynhNguyen/SlidingTabView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
 		387973722B4693AA009A01F3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -996,6 +1008,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		381572872B511C5700CD24C4 /* SlidingTabView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 381572862B511C5700CD24C4 /* XCRemoteSwiftPackageReference "SlidingTabView" */;
+			productName = SlidingTabView;
+		};
 		387973732B4693AA009A01F3 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 387973722B4693AA009A01F3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
