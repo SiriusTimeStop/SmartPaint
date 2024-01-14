@@ -112,17 +112,18 @@ struct LoginView: View {
     @ViewBuilder
     private var verticalLayout: some View {
         VStack(spacing: 10){
-            VStack(alignment: .center, spacing: 10) {
-                Text("SmartPaint")
-                    .font(.largeTitle.bold())
-                
-                Text("Sign In SmartPaint Account")
-                    .font(.title3)
-            }
+            Text("SmartPaint")
+                .font(.largeTitle.bold())
+                .hAlign(.leading)
+            
+            Text("Sign In SmartPaint Account")
+                .font(.title3)
+                .hAlign(.leading)
+            
             Image("AppLogo")
                 .resizable()
                 .scaledToFit()
-                .padding(.top,37)
+                .padding(.top,25)
             
             VStack(spacing: 12){
                 TextField("Email",text: $emailID)
@@ -130,7 +131,7 @@ struct LoginView: View {
                     .border(1,.gray.opacity(0.5))
                     .padding(.top,25)
                 
-                SecureField("Password",text: $password)
+               SecureField("Password",text: $password)
                     .textContentType(.emailAddress)
                     .border(1,.gray.opacity(0.5))
                 
@@ -138,6 +139,7 @@ struct LoginView: View {
                     .font(.callout)
                     .fontWeight(.medium)
                     .tint(.black)
+                    .hAlign(.trailing)
                 
                 Button {
                     loginUser()
@@ -152,23 +154,23 @@ struct LoginView: View {
                         .font(.title2)
                 }
                 .padding(.top,10)
-                
-                //MARK: register button
-                HStack{
-                    Text("Don't have an account?")
-                        .foregroundColor(.gray)
-                    
-                    Button("Register Now"){
-                        createAccount.toggle()
-                    }
-                    .fontWeight(.bold)
-                    .foregroundColor(.black)
-                }
-                .font(.callout)
-                .vAlign(.bottom)
             }
-            .padding(.top,25)
+            
+            //MARK: register button
+            HStack{
+                Text("Don't have an account?")
+                    .foregroundColor(.gray)
+                
+                Button("Register Now"){
+                    createAccount.toggle()
+                }
+                .fontWeight(.bold)
+                .foregroundColor(.black)
+            }
+            .font(.callout)
+            .vAlign(.bottom)
         }
+        .vAlign(.top)
         .padding(15)
         .overlay(content: {
             LoadingView(show: $isLoading)
