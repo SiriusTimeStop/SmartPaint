@@ -23,6 +23,7 @@ struct MultiDrawView : View {
     @State var color : Color = .black
     @State var type : PKInkingTool.InkType = .pencil
     @State var colorPicker = false
+    @Environment(\.dismiss) var dismiss
     
     var body: some View{
         NavigationView{
@@ -32,14 +33,20 @@ struct MultiDrawView : View {
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarItems(leading: Button(action: {
                     
-                    // saving Image...
-                    SaveImage()
-                    
+                    dismiss()
                 }, label: {
                     
-                    Image(systemName: "square.and.arrow.down.fill")
+                    Image(systemName: "arrow.backward")
                         .font(.title)
                 }),trailing: HStack(spacing:15){
+                    
+                    Button(action: {
+                        SaveImage()
+                    }, label: {
+                        Image(systemName: "square.and.arrow.down.fill")
+                            .font(.title)
+                    })
+                    
                     
                     Button(action: {
                         
