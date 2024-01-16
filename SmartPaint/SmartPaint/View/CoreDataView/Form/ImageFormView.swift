@@ -32,6 +32,7 @@ struct ImageFormView: View {
                         .buttonStyle(.bordered)
                     }
                     Button{
+                        viewModel.name = ImageTextRule(imageText: viewModel.name)
                         if viewModel.updating{
                             if let id = viewModel.id,
                                let selectedImage = myImages.first(where: {$0.id == id}){
@@ -91,6 +92,17 @@ struct ImageFormView: View {
                     viewModel.uiImage = newImage
                 }
             }
+        }
+    }
+    
+    func ImageTextRule(imageText: String) -> String{
+        if imageText.count <= 0{
+            return "Input Image Name"
+        }else if imageText.count > 15{
+            return "Over maximum limit"
+        }
+        else{
+            return imageText
         }
     }
 }

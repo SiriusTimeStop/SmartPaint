@@ -96,7 +96,7 @@ struct ImagePredictView: View {
                 .padding(.bottom,20)
                 Spacer()
             }
-            .navigationBarTitle("Famous Painting")
+            .navigationBarTitle("Painting Classification")
         }.sheet(isPresented: $showPhotoOptions) {
             ImagePicker(image: self.$image, isShown: self.$showPhotoOptions, sourceType: self.sourceType)
         }

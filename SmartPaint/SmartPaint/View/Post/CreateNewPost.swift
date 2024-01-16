@@ -267,6 +267,7 @@ struct CreateNewPost: View {
     func createPost(){
         isloading = true
         showKeyboard = false
+        postText = PostTextRule(postText: postText)
         Task{
             do{
                 guard let profileURL = profileURL else{return}
@@ -309,6 +310,17 @@ struct CreateNewPost: View {
             errorMessage = error.localizedDescription
             showError.toggle()
         })
+    }
+    
+    func PostTextRule(postText: String) -> String{
+        if postText.count <= 0{
+            return "Input Post Text"
+        }else if postText.count > 30{
+            return "Over maximum limit"
+        }
+        else{
+            return postText
+        }
     }
 }
 

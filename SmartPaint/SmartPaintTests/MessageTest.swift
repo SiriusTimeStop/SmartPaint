@@ -1,15 +1,14 @@
 //
-//  SmartPaintTests.swift
+//  MessageTest.swift
 //  SmartPaintTests
 //
-//  Created by jackychoi on 4/1/2024.
+//  Created by jackychoi on 16/1/2024.
 //
 
 import XCTest
 @testable import SmartPaint
 
-final class SmartPaintTests: XCTestCase {
-    
+final class MessageTest: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -18,32 +17,33 @@ final class SmartPaintTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-    
-    func testBioRuleEmpty() throws{
-        let register = RegisterView()
-        let userBio = ""
+
+    func testChatBotEmpty() throws{
+        let chatBot = ChatView()
+        let userMessage = ""
         
-        let usd = register.BioRule(userBio: userBio)
-        let expected = "Welcome to SmartPaint"
+        let usd = chatBot.MessageTextRule(textInput: userMessage)
+        let expected = "Input Message"
         
         XCTAssertEqual(usd, expected, "Test faild.")
     }
     
-    func testBioRule() throws{
-        let register = RegisterView()
-        let userBio = "abcd"
+    func testChatBot() throws{
+        let chatBot = ChatView()
+        let userMessage = "abcdefg"
         
-        let usd = register.BioRule(userBio: userBio)
-        let expected = "abcd"
+        let usd = chatBot.MessageTextRule(textInput: userMessage)
+        let expected = "abcdefg"
+        
         XCTAssertEqual(usd, expected, "Test faild.")
     }
     
-    func testBioRuleTextMax() throws{
-        let register = RegisterView()
-        let userBio = "abcdefjhijklmnopqrstuvwxyz"
+    func testChatBotMax() throws{
+        let chatBot = ChatView()
+        let userMessage = "abcdefjhijklmnopqrstuvwxyz"
         
-        let repeatStr = String(repeating: userBio, count: 30)
-        let usd = register.BioRule(userBio: repeatStr)
+        let repeatStr = String(repeating: userMessage, count: 30)
+        let usd = chatBot.MessageTextRule(textInput: repeatStr)
         let expected = "Over maximum limit"
         
         XCTAssertEqual(usd, expected, "Test faild.")
@@ -55,4 +55,5 @@ final class SmartPaintTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+
 }

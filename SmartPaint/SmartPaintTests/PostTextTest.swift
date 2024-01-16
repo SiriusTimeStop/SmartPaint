@@ -1,15 +1,14 @@
 //
-//  SmartPaintTests.swift
+//  PostTextTest.swift
 //  SmartPaintTests
 //
-//  Created by jackychoi on 4/1/2024.
+//  Created by jackychoi on 16/1/2024.
 //
 
 import XCTest
 @testable import SmartPaint
 
-final class SmartPaintTests: XCTestCase {
-    
+final class PostTextTest: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,34 +18,43 @@ final class SmartPaintTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testBioRuleEmpty() throws{
-        let register = RegisterView()
-        let userBio = ""
+    func testPostTextEmpty() throws{
+        let post = ""
         
-        let usd = register.BioRule(userBio: userBio)
-        let expected = "Welcome to SmartPaint"
+        let usd = PostTextRule(postText: post)
+        let expected = "Input Post Text"
         
         XCTAssertEqual(usd, expected, "Test faild.")
     }
     
-    func testBioRule() throws{
-        let register = RegisterView()
-        let userBio = "abcd"
+    
+    func testPostText() throws{
+        let post = "abcdef"
         
-        let usd = register.BioRule(userBio: userBio)
-        let expected = "abcd"
+        let usd = PostTextRule(postText: post)
+        let expected = "abcdef"
+        
         XCTAssertEqual(usd, expected, "Test faild.")
     }
     
-    func testBioRuleTextMax() throws{
-        let register = RegisterView()
-        let userBio = "abcdefjhijklmnopqrstuvwxyz"
+    func testPostTextMax() throws{
+        let post = "abcdefjhijklmnopqrstuvwxyzabcdefghijklmnop"
         
-        let repeatStr = String(repeating: userBio, count: 30)
-        let usd = register.BioRule(userBio: repeatStr)
+        let usd = PostTextRule(postText: post)
         let expected = "Over maximum limit"
         
         XCTAssertEqual(usd, expected, "Test faild.")
+    }
+
+    func PostTextRule(postText: String) -> String{
+        if postText.count <= 0{
+            return "Input Post Text"
+        }else if postText.count > 30{
+            return "Over maximum limit"
+        }
+        else{
+            return postText
+        }
     }
 
     func testPerformanceExample() throws {
@@ -55,4 +63,5 @@ final class SmartPaintTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+
 }

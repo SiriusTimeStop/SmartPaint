@@ -77,6 +77,7 @@ struct ChatView: View {
     }
     
     func sendMessage(){
+        textInput = MessageTextRule(textInput: textInput)
         chatService.sendMessage(textInput)
         textInput = ""
     }
@@ -91,6 +92,17 @@ struct ChatView: View {
         logoAnimating = false
         timer?.invalidate()
         timer = nil
+    }
+    
+    func MessageTextRule(textInput: String) -> String{
+        if textInput.count <= 0{
+            return "Input Message"
+        }else if textInput.count > 50{
+            return "Over maximum limit"
+        }
+        else{
+            return textInput
+        }
     }
 }
 

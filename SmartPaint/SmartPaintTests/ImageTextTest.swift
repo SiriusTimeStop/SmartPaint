@@ -1,15 +1,14 @@
 //
-//  SmartPaintTests.swift
+//  ImageTextTest.swift
 //  SmartPaintTests
 //
-//  Created by jackychoi on 4/1/2024.
+//  Created by jackychoi on 16/1/2024.
 //
 
 import XCTest
 @testable import SmartPaint
 
-final class SmartPaintTests: XCTestCase {
-    
+final class ImageTextTest: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -18,35 +17,43 @@ final class SmartPaintTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-    
-    func testBioRuleEmpty() throws{
-        let register = RegisterView()
-        let userBio = ""
+
+    func testImageFormEmpty() throws{
+        let imageText = ""
         
-        let usd = register.BioRule(userBio: userBio)
-        let expected = "Welcome to SmartPaint"
+        let usd = ImageTextRule(imageText: imageText)
+        let expected = "Input Image Name"
         
         XCTAssertEqual(usd, expected, "Test faild.")
     }
     
-    func testBioRule() throws{
-        let register = RegisterView()
-        let userBio = "abcd"
+    func testImageForm() throws{
+        let imageText = "abcdef"
         
-        let usd = register.BioRule(userBio: userBio)
-        let expected = "abcd"
+        let usd = ImageTextRule(imageText: imageText)
+        let expected = "abcdef"
+        
         XCTAssertEqual(usd, expected, "Test faild.")
     }
     
-    func testBioRuleTextMax() throws{
-        let register = RegisterView()
-        let userBio = "abcdefjhijklmnopqrstuvwxyz"
+    func testImageFormMax() throws{
+        let imageText = "abcdefjhijklmnopqrstuvwxyzabcdefghijklmnop"
         
-        let repeatStr = String(repeating: userBio, count: 30)
-        let usd = register.BioRule(userBio: repeatStr)
+        let usd = ImageTextRule(imageText: imageText)
         let expected = "Over maximum limit"
         
         XCTAssertEqual(usd, expected, "Test faild.")
+    }
+    
+    func ImageTextRule(imageText: String) -> String{
+        if imageText.count <= 0{
+            return "Input Image Name"
+        }else if imageText.count > 15{
+            return "Over maximum limit"
+        }
+        else{
+            return imageText
+        }
     }
 
     func testPerformanceExample() throws {
@@ -55,4 +62,5 @@ final class SmartPaintTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+
 }

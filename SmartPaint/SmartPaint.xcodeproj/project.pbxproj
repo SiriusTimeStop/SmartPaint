@@ -26,6 +26,9 @@
 		381572642B4FFF5600CD24C4 /* ImageFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381572612B4FFF5500CD24C4 /* ImageFormView.swift */; };
 		381572682B4FFFE400CD24C4 /* MyImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381572672B4FFFE400CD24C4 /* MyImage+Extension.swift */; };
 		381572882B511C5700CD24C4 /* SlidingTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 381572872B511C5700CD24C4 /* SlidingTabView */; };
+		381572C92B56780900CD24C4 /* PostTextTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381572C82B56780900CD24C4 /* PostTextTest.swift */; };
+		381572CB2B5678B400CD24C4 /* ImageTextTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381572CA2B5678B400CD24C4 /* ImageTextTest.swift */; };
+		381572CD2B56793F00CD24C4 /* MessageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381572CC2B56793F00CD24C4 /* MessageTest.swift */; };
 		387973472B469116009A01F3 /* SmartPaintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973462B469116009A01F3 /* SmartPaintApp.swift */; };
 		387973492B469116009A01F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973482B469116009A01F3 /* ContentView.swift */; };
 		3879734B2B469118009A01F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3879734A2B469118009A01F3 /* Assets.xcassets */; };
@@ -55,9 +58,6 @@
 		387973D22B498347009A01F3 /* PromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973CC2B498347009A01F3 /* PromptView.swift */; };
 		387973D32B498347009A01F3 /* GeneratorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973CD2B498347009A01F3 /* GeneratorViewModel.swift */; };
 		387973D62B498364009A01F3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 387973D52B498364009A01F3 /* Alamofire */; };
-		387973DB2B4983C1009A01F3 /* PaintStyleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973D82B4983C1009A01F3 /* PaintStyleDetail.swift */; };
-		387973DC2B4983C1009A01F3 /* PaintingMediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973D92B4983C1009A01F3 /* PaintingMediaView.swift */; };
-		387973DD2B4983C1009A01F3 /* PaintStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973DA2B4983C1009A01F3 /* PaintStyle.swift */; };
 		387973DF2B498AA8009A01F3 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973DE2B498AA8009A01F3 /* Post.swift */; };
 		387973E12B498AF8009A01F3 /* CreateNewPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973E02B498AF8009A01F3 /* CreateNewPost.swift */; };
 		387973E32B498C3B009A01F3 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387973E22B498C3B009A01F3 /* PostView.swift */; };
@@ -108,6 +108,9 @@
 		381572602B4FFF5500CD24C4 /* FormType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormType.swift; sourceTree = "<group>"; };
 		381572612B4FFF5500CD24C4 /* ImageFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFormView.swift; sourceTree = "<group>"; };
 		381572672B4FFFE400CD24C4 /* MyImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyImage+Extension.swift"; sourceTree = "<group>"; };
+		381572C82B56780900CD24C4 /* PostTextTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTextTest.swift; sourceTree = "<group>"; };
+		381572CA2B5678B400CD24C4 /* ImageTextTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextTest.swift; sourceTree = "<group>"; };
+		381572CC2B56793F00CD24C4 /* MessageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTest.swift; sourceTree = "<group>"; };
 		387973432B469116009A01F3 /* SmartPaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartPaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		387973462B469116009A01F3 /* SmartPaintApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartPaintApp.swift; sourceTree = "<group>"; };
 		387973482B469116009A01F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -134,9 +137,6 @@
 		387973CB2B498347009A01F3 /* OpenAIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
 		387973CC2B498347009A01F3 /* PromptView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromptView.swift; sourceTree = "<group>"; };
 		387973CD2B498347009A01F3 /* GeneratorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratorViewModel.swift; sourceTree = "<group>"; };
-		387973D82B4983C1009A01F3 /* PaintStyleDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintStyleDetail.swift; sourceTree = "<group>"; };
-		387973D92B4983C1009A01F3 /* PaintingMediaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintingMediaView.swift; sourceTree = "<group>"; };
-		387973DA2B4983C1009A01F3 /* PaintStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintStyle.swift; sourceTree = "<group>"; };
 		387973DE2B498AA8009A01F3 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		387973E02B498AF8009A01F3 /* CreateNewPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewPost.swift; sourceTree = "<group>"; };
 		387973E22B498C3B009A01F3 /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
@@ -282,6 +282,9 @@
 			isa = PBXGroup;
 			children = (
 				387973572B469118009A01F3 /* SmartPaintTests.swift */,
+				381572C82B56780900CD24C4 /* PostTextTest.swift */,
+				381572CA2B5678B400CD24C4 /* ImageTextTest.swift */,
+				381572CC2B56793F00CD24C4 /* MessageTest.swift */,
 			);
 			path = SmartPaintTests;
 			sourceTree = "<group>";
@@ -305,7 +308,6 @@
 				387973F42B4AD6F8009A01F3 /* Museum */,
 				387973E92B4992C4009A01F3 /* Post */,
 				387973E82B49929A009A01F3 /* Profile */,
-				387973D72B4983C1009A01F3 /* Painting media */,
 				387973882B46DA3E009A01F3 /* Helpers */,
 				387973852B46D934009A01F3 /* MainView */,
 				387973842B46D91E009A01F3 /* Login */,
@@ -375,16 +377,6 @@
 				387973CD2B498347009A01F3 /* GeneratorViewModel.swift */,
 			);
 			path = GenerateImage;
-			sourceTree = "<group>";
-		};
-		387973D72B4983C1009A01F3 /* Painting media */ = {
-			isa = PBXGroup;
-			children = (
-				387973D82B4983C1009A01F3 /* PaintStyleDetail.swift */,
-				387973D92B4983C1009A01F3 /* PaintingMediaView.swift */,
-				387973DA2B4983C1009A01F3 /* PaintStyle.swift */,
-			);
-			path = "Painting media";
 			sourceTree = "<group>";
 		};
 		387973E82B49929A009A01F3 /* Profile */ = {
@@ -579,14 +571,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				387973DD2B4983C1009A01F3 /* PaintStyle.swift in Sources */,
 				387973F32B4AB756009A01F3 /* Annotatedltem.swift in Sources */,
 				381572582B4FFD0000CD24C4 /* MyImagesContainer.swift in Sources */,
 				381572682B4FFFE400CD24C4 /* MyImage+Extension.swift in Sources */,
 				3815725B2B4FFD9200CD24C4 /* CoreImagePicker.swift in Sources */,
 				387973E52B498C40009A01F3 /* ReusablePostsView.swift in Sources */,
 				387973812B46B10D009A01F3 /* User.swift in Sources */,
-				387973DC2B4983C1009A01F3 /* PaintingMediaView.swift in Sources */,
 				387973CF2B498347009A01F3 /* GeneratorView.swift in Sources */,
 				381572152B4C469600CD24C4 /* ChatBubble.swift in Sources */,
 				3815725D2B4FFDCA00CD24C4 /* FileManager+Extension.swift in Sources */,
@@ -622,7 +612,6 @@
 				381572132B4C469000CD24C4 /* ChatBubbleShape.swift in Sources */,
 				387973ED2B4AAFBB009A01F3 /* LocationView.swift in Sources */,
 				381572192B4D435100CD24C4 /* WorldFamousPainting 1.mlmodel in Sources */,
-				387973DB2B4983C1009A01F3 /* PaintStyleDetail.swift in Sources */,
 				381572562B4FFC9500CD24C4 /* MyImagesDataModel.xcdatamodeld in Sources */,
 				387973EF2B4AB02A009A01F3 /* LocationDetail.swift in Sources */,
 				381572112B4BF1C500CD24C4 /* ChatService.swift in Sources */,
@@ -633,6 +622,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				381572CB2B5678B400CD24C4 /* ImageTextTest.swift in Sources */,
+				381572CD2B56793F00CD24C4 /* MessageTest.swift in Sources */,
+				381572C92B56780900CD24C4 /* PostTextTest.swift in Sources */,
 				387973582B469118009A01F3 /* SmartPaintTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

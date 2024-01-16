@@ -192,7 +192,7 @@ struct RegisterView: View{
                 .textContentType(.emailAddress)
                 .border(1,.gray.opacity(0.5))
                 .padding(.top, horizontalSizeClass == .compact ? 25 : 0)
-            
+                
             TextField("Email",text: $emailID)
                 .textContentType(.emailAddress)
                 .border(1,.gray.opacity(0.5))
@@ -235,9 +235,7 @@ struct RegisterView: View{
                 
                 let downloadURL = try await storageRef.downloadURL()
                 
-                if userBio == ""{
-                    userBio = "Welcom to SmartPaint"
-                }
+                userBio = BioRule(userBio: userBio)
                 
                 let user = User(username: userName, userBio: userBio, userUID: userUID, userEmail: emailID, userProfileURL: downloadURL)
                 
@@ -265,6 +263,17 @@ struct RegisterView: View{
             showError.toggle()
             isLoading = false
         })
+    }
+    
+    func BioRule(userBio: String) -> String{
+        if userBio.count <= 0{
+            return "Welcome to SmartPaint"
+        }else if userBio.count > 20{
+            return "Over maximum limit"
+        }
+        else{
+            return userBio
+        }
     }
 }
 
