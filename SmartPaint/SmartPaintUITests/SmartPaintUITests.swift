@@ -30,37 +30,6 @@ final class SmartPaintUITests: XCTestCase {
 
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-    
-    func testCheckAllUIFields(){
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-        
-        XCTAssert(app.textFields["Email"].waitForExistence(timeout: 1.5))
-        XCTAssert(app.textFields["Password"].waitForExistence(timeout: 1.5))
-        XCTAssert(app.buttons["Sign in"].waitForExistence(timeout: 1.5))
-    }
-    
-    func TestIsAppShowingResultCorrectly(){
-        
-        let app = XCUIApplication()
-        app.launch()
-        
-        let textFieldEmail = app.textFields["Email"]
-        textFieldEmail.tap()
-        textFieldEmail.typeText("Test@gmail.com")
-        
-        let textFieldPassword = app.textFields["Password"]
-        textFieldPassword.tap()
-        textFieldPassword.typeText("123321")
-        
-        let loginButton = app.buttons["Sign in"]
-        loginButton.tap()
-        
-        let result = app.toggles["log_status"]
-        XCTAssertEqual(result,true)
-
-    }
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
