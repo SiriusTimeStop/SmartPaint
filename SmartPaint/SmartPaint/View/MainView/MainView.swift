@@ -29,7 +29,7 @@ struct MainView: View {
                     Text("Draw")
                 }
             
-            LocationView()
+            LocationMenuView()
                 .tabItem {
                     Image(systemName: "filemenu.and.selection")
                     Text("Museum")
@@ -41,6 +41,7 @@ struct MainView: View {
                     Text("Profile")
                 }
         }
+        .animation(.easeInOut(duration: 0.3).delay(0.2))
         .tint(.black)
     }
 }

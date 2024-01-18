@@ -10,9 +10,10 @@ import MapKit
 import CoreLocation
 
 struct LocationView: View {
+    @Environment(\.dismiss) var dismiss
 
     var body: some View {
-        ZStack{
+        ZStack(alignment:.topTrailing){
             NavigationView{
                 List(LocationArray){ location in
                     NavigationLink(destination: LocationDetail(location: location)) {
@@ -22,6 +23,15 @@ struct LocationView: View {
                 .navigationBarTitle("Museum")
                 .listStyle(.plain)
             }
+            
+            Button {
+                dismiss()
+            } label: {
+                Image(systemName: "menubar.arrow.down.rectangle")
+                    .foregroundStyle(.black)
+                    .font(.title2)
+            }
+            .padding()
         }
     }
 }
