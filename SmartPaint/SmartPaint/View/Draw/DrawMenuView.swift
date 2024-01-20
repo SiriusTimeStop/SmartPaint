@@ -39,7 +39,7 @@ struct DrawMenuView: View {
                             .frame(width: 200, height: 200)
                             .cornerRadius(30)
                         
-                        Text("Manual Draw")
+                        Text("User Draw")
                             .font(.subheadline)
                             .foregroundColor(.black)
                             .fontWeight(.bold)
@@ -91,7 +91,7 @@ struct DrawMenuView: View {
                                 .frame(width: 200, height: 200)
                                 .cornerRadius(30)
                             
-                            Text("Manual Draw")
+                            Text("User Draw")
                                 .font(.subheadline)
                                 .foregroundColor(.black)
                                 .fontWeight(.bold)
