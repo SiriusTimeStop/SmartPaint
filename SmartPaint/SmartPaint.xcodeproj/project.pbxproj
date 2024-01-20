@@ -340,6 +340,7 @@
 				387973802B46B10D009A01F3 /* User.swift */,
 				387973DE2B498AA8009A01F3 /* Post.swift */,
 				387973EA2B4AA53B009A01F3 /* Location.swift */,
+				387973CD2B498347009A01F3 /* GeneratorViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -391,7 +392,6 @@
 				387973C92B498347009A01F3 /* GeneratorView.swift */,
 				387973CB2B498347009A01F3 /* OpenAIService.swift */,
 				387973CC2B498347009A01F3 /* PromptView.swift */,
-				387973CD2B498347009A01F3 /* GeneratorViewModel.swift */,
 			);
 			path = GenerateImage;
 			sourceTree = "<group>";
