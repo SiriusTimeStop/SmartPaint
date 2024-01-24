@@ -3,7 +3,7 @@
 //  SmartPaint
 //
 //  Created by jackychoi on 7/1/2024.
-//
+
 
 import SwiftUI
 import MapKit

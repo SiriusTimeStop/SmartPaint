@@ -3,7 +3,7 @@
 //  SmartPaint
 //
 //  Created by jackychoi on 5/1/2024.
-//
+//MARK: Source Code follow to youtube "SwiftUI Social Media App - Firebase" https://www.youtube.com/watch?v=-pAQcPolruw&t=1279s
 
 import SwiftUI
 

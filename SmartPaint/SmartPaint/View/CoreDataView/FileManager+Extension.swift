@@ -3,7 +3,8 @@
 //  coreDataSave
 //
 //  Created by jackychoi on 11/1/2024.
-//
+//MARK: Source Code follow to youtube "My Images Core Data" https://www.youtube.com/watch?v=og1R6HIYU5c&list=PLBn01m5Vbs4DYmnxdD1ZuEJA7yXqHcSEd&index=1
+
 
 import UIKit
 

@@ -3,7 +3,7 @@
 //  SmartPaint
 //
 //  Created by jackychoi on 8/1/2024.
-//
+//MARK: Source Code follow to youtube "Multi-turn Chat with Gemini AI on iOS" SwiftUI Tutorial https://www.youtube.com/watch?v=VO3YGN2UuHc&t=4s
 
 import Foundation
 

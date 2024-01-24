@@ -3,7 +3,7 @@
 //  GeminiChat
 //
 //  Created by Anup D'Souza
-//
+//MARK: Source Code follow to youtube "Multi-turn Chat with Gemini AI on iOS" SwiftUI Tutorial https://www.youtube.com/watch?v=VO3YGN2UuHc&t=4s
 
 import Foundation
 import SwiftUI

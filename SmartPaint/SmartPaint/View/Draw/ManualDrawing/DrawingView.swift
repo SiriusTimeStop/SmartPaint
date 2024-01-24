@@ -3,7 +3,7 @@
 //  SmartArt
 //
 //  Created by jackychoi on 3/1/2024.
-//
+//MARK: Source Code follow to youtube "SwiftUI Pencil Kit - SwiftUI Drawing App Using Pencil Kit" https://www.youtube.com/watch?v=LR-ttBoa89M
 
 import SwiftUI
 import PencilKit

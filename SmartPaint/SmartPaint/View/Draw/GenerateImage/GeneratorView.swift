@@ -3,7 +3,7 @@
 //  ImageGeneratorApp
 //
 //  Created by jackychoi on 2/1/2024.
-//
+//MARK: Source Code follow to youtube "Build an AI Image Generator iOS App" https://www.youtube.com/watch?v=ynI2SCE_EPo
 
 import SwiftUI
 

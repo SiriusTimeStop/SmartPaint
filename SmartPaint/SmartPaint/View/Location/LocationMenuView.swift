@@ -3,7 +3,7 @@
 //  SmartPaint
 //
 //  Created by jackychoi on 18/1/2024.
-//
+//MARK: Source Code follow to youtube "How to Get User Location on a Map" https://www.youtube.com/watch?v=hWMkimzIQoU&t=1351s
 
 import SwiftUI
 import SlidingTabView
