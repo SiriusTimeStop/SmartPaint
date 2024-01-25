@@ -1,6 +1,6 @@
 # SmartPaint
 
-<p align="center"><img src="Image/Logo.jpg" width="256" height="256" /></p>
+<p align="center"><img src="Image/Logo.png" width="256" height="256" /></p>
 
 SmartPaint is an app for drawing.
 
@@ -12,3 +12,6 @@ SmartPaint is an app for drawing.
 5. Image Prediction
 6. AI Chatbot
 7. Image Location Save
+
+# Runtime environment
+IOS: 17.0
