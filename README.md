@@ -11,7 +11,7 @@ SmartPaint is an app for drawing.
 4. Museum Location
 5. Image Prediction
 6. AI Chatbot
-7. Image Location Save
+7. Image Download and Save
 
 # Runtime environment
 IOS: 17.0
