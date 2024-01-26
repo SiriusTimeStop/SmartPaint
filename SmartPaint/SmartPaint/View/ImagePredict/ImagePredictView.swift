@@ -3,7 +3,7 @@
 //  Aircraft Introduction
 //
 //  Created by jackychoi on 1/4/2023.
-//MARK: Source Code follow to github "Image classifier"
+//MARK: Source Code refer to github "Image classifier"
 
 import SwiftUI
 import CoreML

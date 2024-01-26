@@ -4,7 +4,7 @@
 //
 //  Created by Mohammad Azam on 2/6/20.
 //  Copyright © 2020 Mohammad Azam. All rights reserved.
-//MARK: Source Code follow to github "Image classifier"
+//MARK: Source Code refer to github "Image classifier"
 
 import Foundation
 import SwiftUI

@@ -4,7 +4,7 @@
 //
 //  Created by 山本響 on 2022/12/28.
 //  Copyright © 2022 Mohammad Azam. All rights reserved.
-//MARK: Source Code follow to github "Image classifier"
+//MARK: Source Code refer to github "Image classifier"
 
 import Foundation
 import CoreML
