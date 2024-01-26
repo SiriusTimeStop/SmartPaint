@@ -20,6 +20,7 @@ struct ChatBubbleShape: Shape {
         return (direction == .left) ? leftBubble(in: rect) : rightBubble(in: rect)
     }
     
+    //MARK: Left bubble size
     private func leftBubble(in rect: CGRect) -> Path {
         let width = rect.width
         let height = rect.height
@@ -53,6 +54,7 @@ struct ChatBubbleShape: Shape {
         return path
     }
     
+    //MARK: Right bubble size
     private func rightBubble(in rect: CGRect) -> Path {
         let width = rect.width
         let height = rect.height

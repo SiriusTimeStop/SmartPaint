@@ -27,7 +27,7 @@ struct MultiDrawView : View {
     
     var body: some View{
         NavigationView{
-            // Drawing View...
+            //MARK: Drawing View...
             DrawPageView(canvas: $canvas, isDraw: $isDraw,type: $type,color: $color)
                 .navigationTitle("Drawing")
                 .navigationBarTitleDisplayMode(.inline)
@@ -161,7 +161,7 @@ struct DrawPageView: UIViewRepresentable{
     }
     
     func updateUIView(_ uiView: PKCanvasView, context: Context) {
-        //updating
+        //MARK: updating
         
         uiView.tool = isDraw ? ink : eraser
     }

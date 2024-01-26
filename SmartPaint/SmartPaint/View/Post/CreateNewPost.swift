@@ -15,11 +15,11 @@ struct CreateNewPost: View {
     var onPost: (Post) -> ()
     @State private var postText: String = ""
     @State private var postImageData: Data?
-    /// - Stored user
+    //MARK: - Stored user
     @AppStorage("user_profile_url") private var profileURL: URL?
     @AppStorage("user_name") private var userName: String = ""
     @AppStorage("user_UID") private var userUID: String = ""
-    /// - view properties
+    //MARK: - view properties
     @Environment(\.dismiss) private var dismiss
     @State private var isloading: Bool = false
     @State private var errorMessage: String = ""
